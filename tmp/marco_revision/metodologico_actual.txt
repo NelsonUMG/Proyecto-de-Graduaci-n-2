@@ -1,0 +1,1387 @@
+
+
+===== PAGE 1 =====
+
+ 
+ 
+UNIVERSIDAD MARIANO GÁLVEZ DE GUATEMALA 
+FACULTAD DE INGENIERÍA EN SISTEMAS DE INFORMACIÓN 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+NELSON JOSUÉ PINEDA CULAJAY 
+GUATEMALA, MAYO 2026. 
+ 
+ 
+UNIVERSIDAD MARIANO GÁLVEZ DE GUATEMALA 
+DESARROLLO DE UN SISTEMA WEB PARA 
+GESTIÓN DE CITAS Y TRATAMIENTOS EN UNA 
+CLÍNICA VETERINARIA EN ZONA 18 EN CIUDAD DE 
+GUATEMALA UTILIZANDO NODE.JS 
+REACT Y SQL SERVER. 
+
+===== PAGE 2 =====
+
+ 
+ 
+FACULTAD DE INGENIERÍA EN SISTEMAS DE INFORMACIÓN 
+. 
+ 
+TRABAJO DE GRADUACIÓN 
+PRESENTADO POR: 
+NELSON JOSUÉ PINEDA CULAJAY 
+PREVIO A OPTAR AL GRADO ACADÉMICO DE 
+LICENCIADO EN INGENIERÍA EN SISTEMAS DE 
+INFORMACIÓN Y CIENCIAS DE LA COMPUTACIÓN 
+Y 
+TÍTULO PROFESIONAL DE 
+INGENIERO EN SISTEMAS DE INFORMACIÓN 
+Y 
+CIENCIAS DE LA COMPUTACIÓN 
+ 
+ 
+GUATEMALA, MAYO 2026
+
+===== PAGE 3 =====
+
+  
+iii 
+ 
+AUTORIDADES DE LA FACULTAD Y ASESOR DE TRABAJO DE GRADUACIÓN 
+DECANO DE LA FACULTAD: 
+ING. JORGE ALBERTO ARIAS TOBAR. 
+ 
+ 
+ 
+ 
+SECRETARIO DE LA FACULTAD: 
+ING. HUGO ADALBERTO HERNÁNDEZ SANTIZO. 
+ 
+ 
+ 
+ 
+ 
+ASESOR: 
+ING. JUAN CARLOS MÉNDEZ N. 
+ 
+
+===== PAGE 4 =====
+
+ 
+ 
+iv 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AUTORIZACIÓN PARA LA IMPRESIÓN DE TRABAJO DE GRADUACIÓN
+
+===== PAGE 5 =====
+
+ 
+ 
+v 
+ 
+ 
+ 
+ 
+ 
+ 
+REGLAMENTO DEL TRABAJO DE GRADUACIÓN 
+Artículo 8: RESPONSABILIDAD 
+“Solamente el autor es responsable de los conceptos expresados en el trabajo de tesis. Su 
+aprobación en manera alguna implica responsabilidad para la Universidad.”
+
+===== PAGE 6 =====
+
+ 
+ 
+ 
+vi 
+Índice 
+ 
+Introducción ...................................................................................................................... 10 
+Capítulo I – Marco Conceptual ......................................................................................... 12 
+1.1 Planteamiento del Problema .................................................................................... 12 
+1.1.1 Antecedentes ................................................................................................... 12 
+1.1.2 Planteamiento del problema ............................................................................ 14 
+1.2 Justificación ......................................................................................................... 15 
+1.3 Objetivos ................................................................................................................. 17 
+1.3.1 Objetivo General ............................................................................................. 17 
+1.3.2 Objetivos Específicos ...................................................................................... 17 
+1.4 Preguntas de la Investigación .................................................................................. 18 
+1.5 Hipótesis .................................................................................................................. 20 
+Capítulo II – Marco Teórico ............................................................................................. 21 
+2.1 Evolución de la Medicina Veterinaria en Guatemala ............................................. 21 
+2.1.1 Origen e Institución formal ............................................................................. 21 
+2.1.2 Desarrollo Gremial y La Práctica Privada Moderna ....................................... 22 
+2.2 Marco Regulatorio y Legal de las Clínica Veterinarias .......................................... 22 
+2.2.1 Ley de Protección y Bienestar Animal ............................................................ 23 
+2.2.2 Control de Medicamentos e Insumos biológicos ............................................ 24 
+2.3 Problemática en la Gestión de Clínicas ................................................................... 25 
+2.3.1 Procesos Manuales y Errores Administrativos ................................................ 25 
+2.3.2 Uso de WhatsApp y Agendas Físicas .............................................................. 26 
+
+===== PAGE 7 =====
+
+ 
+ 
+ 
+2.4 Gestión de Clínica y Atención al Paciente .............................................................. 27 
+2.4.1 Historia Clínica Veterinaria ............................................................................. 27 
+2.4.2 Clasificación de Urgencias (Triaje) ................................................................. 28 
+2.5 Sistema de información en Salud ............................................................................ 30 
+2.5.1 Transformación Digital en Pequeñas Empresas .............................................. 32 
+2.5.2 Gestión de inventarios en clínicas veterinarias ............................................... 33 
+2.5.3 Experiencia del Cliente en Servicios Veterinarios .......................................... 33 
+2.6 Administración y gestión de clínicas veterinarias ................................................... 34 
+2.7 Importancia de la salud pública veterinaria ............................................................ 35 
+2.8 Tecnología de Desarrollo ........................................................................................ 35 
+2.8.1 Arquitectura MVC ........................................................................................... 36 
+2.8.2 BackEnd con Node.js ...................................................................................... 38 
+2.8.3 FrontEnd con React ......................................................................................... 38 
+2.8.4 Base de Datos con Microsoft SQL Server ....................................................... 39 
+2.8.5 Seguridad y Protección de Datos ..................................................................... 40 
+Capítulo III – Marco Metodológico .................................................................................. 42 
+3.1 Variables dependientes e independientes ................................................................ 42 
+3.1.1 Variable Independiente .................................................................................... 42 
+3.1.2 Variable Dependiente ...................................................................................... 42 
+3.1.3 Definición Conceptual ..................................................................................... 42 
+3.1.4 Definición Operacional ................................................................................... 42 
+3.2 Indicadores .............................................................................................................. 43 
+3.3 Supuestos ................................................................................................................ 43 
+vii 
+
+===== PAGE 8 =====
+
+ 
+ 
+ 
+3.4 Enfoque Cuantitativo .............................................................................................. 45 
+3.4.1 Diseño de la Investigación .............................................................................. 45 
+3.5 Estimación de Recursos .......................................................................................... 46 
+3.6 Planificación Gantt .................................................................................................. 47 
+Referencias ........................................................................................................................ 49 
+ 
+viii 
+
+===== PAGE 9 =====
+
+ 
+ 
+    
+ 
+Índice de tablas 
+Tabla 1 .............................................................................................................................. 22 
+Tabla 2 .............................................................................................................................. 24 
+Tabla 3 .............................................................................................................................. 29 
+Tabla 4 .............................................................................................................................. 31 
+Tabla 5 .............................................................................................................................. 39 
+Tabla 6 .............................................................................................................................. 46 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ix 
+
+===== PAGE 10 =====
+
+10 
+ 
+ 
+ 
+Índice de Ilustraciones 
+Ilustración 1 ...................................................................................................................... 26 
+Ilustración 2 ...................................................................................................................... 34 
+Ilustración 3 ...................................................................................................................... 36 
+Ilustración 4 ...................................................................................................................... 37 
+Ilustración 5 ...................................................................................................................... 41 
+Ilustración 6 ...................................................................................................................... 48 
+ 
+ 
+x 
+
+===== PAGE 11 =====
+
+11 
+ 
+ 
+ 
+Introducción 
+La veterinaria forma parte esencial de la vida de las personas y de los animales, por lo 
+cual comparten su tiempo juntos como dueños y mascotas, por ello se surge la necesidad de 
+contar con servicios médicos que garantice una gestión eficiente y confiable. Sin embargo, en la 
+mayoría de casos, al citar clientes de las enfermedades que tiene sus mascotas, estos procesos se 
+realizan de manera manual o mediante medios informales de comunicación, esto pone en lento a 
+la administración de la veterinaria, quejas y malas experiencias que satisfagan para los usuarios. 
+Este proyecto busca dar respuesta a esa problemática mediante el desarrollo de una 
+plataforma web que centralice y modernice la administración de una veterinaria. El propósito es 
+ofrecer una solución que no solo automatice las citas con nivel de riesgos de enfermades de las 
+mascotas, sino que también ofrezca otras herramientas como calendarios, etc… dando 
+seguimiento de orden de las citas, registros de los pacientes y clasificando las enfermedades, 
+todo en un mismo entorno digital accesible para administradores y otros usuarios basados en la 
+investigación teórica. 
+Dentro del proceso de investigación, resulta fundamental establecer bases metodológicas 
+que permitan analizar de manera objetiva el impacto de una solución tecnológica. En este 
+sentido, la implementación de un sistema web para la gestión veterinaria busca mejorar procesos 
+administrativos y clínicos mediante la automatización, organización y resguardo de información 
+relevante para la atención de pacientes. 
+ 
+ 
+ 
+
+===== PAGE 12 =====
+
+12 
+ 
+ 
+Capítulo I – Marco Conceptual 
+1.1 Planteamiento del Problema 
+1.1.1 Antecedentes 
+La empresa veterinaria estaba construida como una farmacia llamada “El Ganadero” y 
+con el paso del tiempo evolucionó hasta convertirse en una clínica veterinaria. A pesar de este 
+crecimiento, sus procesos administrativos se han mantenido de forma manual y con recursos 
+básicos para atender a sus clientes. Actualmente, los clientes deben reservar sus citas mediante 
+un número de WhatsApp del propietario o presentarse físicamente en el lugar para solicitarlas, lo 
+cual evidencia la falta de procesos automatizados dentro de la clínica. 
+Una vez que las citas son confirmadas, el pago se realiza directamente con la veterinaria, 
+emitiendo su respectiva factura. Asimismo, el registro de citas se lleva en documentos físicos, 
+donde se anotan manualmente los datos de cada cliente y su mascota. Este método ha permitido 
+que la clínica continúe operando y organizando sus actividades diarias, pero presenta diversas 
+limitaciones que afectan la eficiencia del servicio. 
+Una vez que ellos confirmaban, el pago se realizaba directamente con la veterinaria, 
+emitiendo su factura correspondiente. El registro de citas se tiene que revisar en un documento 
+donde anotan manualmente los datos de cada cita. Esto implica que cada vez que se desea 
+consultar información, es necesario buscar entre hojas o registros físicos, lo cual consume tiempo 
+y puede generar confusión si la información no está bien organizada. 
+ Este método ha permitido organizar sus procesos diarios, pero presenta problemas como 
+errores de registros por mano, lentitud al revisar si hay cupos o no, dificultad para revisar el 
+calendario y los horarios disponibles, así como la falta de un indicador claro de la demanda 
+
+===== PAGE 13 =====
+
+13 
+ 
+ 
+ocupada. Estas situaciones pueden provocar atrasos en la atención, confusión en la programación 
+de citas y una mala experiencia para los clientes. 
+En la gestión manual también se debe tomar en cuenta las enfermedades de las mascotas 
+que se pueden generar, por lo cual las citas se deben realizar de forma manual clasificándolas 
+según el riesgo que se encuentre. En estos casos, podría llevar un serio problema si el encargado 
+o empleado no sabe identificar correctamente el nivel de riesgo de la enfermedad, lo que podría 
+causar una mala atención al paciente o incluso complicaciones en su estado de salud. Además, 
+este tipo de errores puede afectar la percepción del cliente sobre el servicio brindado. También es 
+importante considerar que, al no contar con un sistema automatizado, la información de los 
+pacientes no se encuentra centralizada, lo que dificulta llevar un historial clínico ordenado de 
+cada mascota. Esto puede provocar que en futuras consultas no se tenga acceso rápido a datos 
+importantes como tratamientos anteriores, diagnósticos o medicamentos suministrados. 
+Otro punto relevante es que la comunicación con los clientes depende completamente del 
+uso de WhatsApp, lo cual puede generar saturación de mensajes, pérdida de información o 
+dificultad para dar seguimiento a cada solicitud. Esto afecta directamente la organización del 
+trabajo y puede generar retrasos innecesarios en la asignación de citas. 
+Asimismo, la falta de reportes o registros digitales limita la posibilidad de analizar la 
+información de la clínica, como la cantidad de pacientes atendidos, los horarios con mayor 
+demanda o los servicios más solicitados. Esta información es importante para la toma de 
+decisiones y para mejorar la administración del negocio. 
+Si bien esto ha sido suficiente para mantener la veterinaria en completa función de los 
+procesos manuales, es necesario considerar que conforme aumenta la cantidad de clientes. 
+
+===== PAGE 14 =====
+
+14 
+ 
+ 
+El uso de tecnologías de información puede ayudar a acelerar los procesos, reducir 
+errores y mejorar la atención al cliente, permitiendo llevar un mejor control de citas, tratamientos 
+y pacientes. Además, facilitaría la organización del personal y mejoraría la experiencia tanto para 
+los trabajadores como para los clientes. Estas limitaciones evidencian la necesidad de modernizar 
+los procesos mediante un sistema digital que facilite la gestión y tratamientos en las citas, y que 
+ofrezca una experiencia más ágil, organizada y transparente para todos los usuarios. 
+1.1.2 Planteamiento del problema 
+El proceso de gestión de citas se realiza a través de aplicaciones de mensajería como 
+WhatsApp o de forma presencial, sin contar con un mecanismo automatizado que permita 
+visualizar la disponibilidad en tiempo real. Esto genera conflictos en la programación de 
+horarios, retrasos en la asignación de citas y dificultades para los clientes que desean atender a 
+sus mascotas. Además, la falta de un registro estructurado de pagos y confirmaciones incrementa 
+el riesgo de errores administrativos y dificulta el control adecuado de la información. 
+En cuanto al control de tratamientos, la ausencia de una plataforma digital que permita 
+registrar, dar seguimiento y consultar el historial clínico de las mascotas provoca que estos 
+procesos dependan de documentos físicos o registros manuales, lo cual resulta poco eficiente y 
+propenso a equivocaciones. Esto puede afectar la continuidad del tratamiento de los pacientes y 
+generar dificultades al momento de brindar una atención adecuada. 
+Además, la visibilidad y organización de la clínica se ve afectada por la dependencia de 
+herramientas informales como WhatsApp para la comunicación con los clientes. Actualmente, 
+no se cuenta con un sistema digital que permita una interacción más estructurada, lo que limita la 
+organización interna y dificulta la gestión eficiente de los servicios ofrecidos. 
+
+===== PAGE 15 =====
+
+15 
+ 
+ 
+Otro aspecto importante es que la información de los pacientes no se encuentra 
+centralizada, lo que impide llevar un control adecuado del historial clínico, tratamientos 
+realizados y diagnósticos previos. Esto genera pérdida de tiempo al buscar información, posibles 
+errores en la atención y una menor calidad en el servicio brindado. 
+En otros contextos, se han implementado sistemas digitales que permiten automatizar la 
+gestión de citas, mejorar el control de pacientes y optimizar los procesos administrativos en 
+clínicas de salud. Sin embargo, en muchas clínicas veterinarias en Guatemala aún se continúa 
+trabajando con métodos manuales, lo que representa una oportunidad de mejora mediante la 
+implementación de soluciones tecnológicas. 
+El problema principal es que la administración de citas, tratamientos y registros de 
+pacientes en la clínica veterinaria carece de una plataforma digital que centralice la información, 
+automatice los procesos y facilite la experiencia tanto para el personal como para los clientes. 
+Asimismo, la falta de reportes automatizados dificulta el análisis del funcionamiento de 
+la clínica, ya que no se cuenta con información clara sobre la cantidad de pacientes atendidos, los 
+horarios con mayor demanda o los tratamientos más frecuentes. Esto limita la toma de decisiones 
+dentro del negocio, ya que no se pueden identificar fácilmente áreas de mejora ni optimizar los 
+recursos disponibles. Un sistema digital permitiría generar esta información de manera rápida y 
+organizada, facilitando la administración y mejorando la eficiencia de los procesos. 
+1.2 Justificación 
+La gestión de citas y tratamientos en clínicas veterinarias en Guatemala se realiza en 
+muchos casos de manera tradicional, utilizando métodos como llamadas telefónicas o 
+aplicaciones de mensajería instantánea como WhatsApp. Esta metodología conlleva diversas 
+
+===== PAGE 16 =====
+
+16 
+ 
+ 
+ineficiencias, como la desorganización en los horarios, dificultad para verificar la disponibilidad 
+de citas, errores en los registros y falta de control sobre la información de los pacientes. Estos 
+problemas afectan tanto al personal de la clínica como a los clientes que buscan una atención 
+rápida y ordenada para sus mascotas. 
+En distintos contextos, la digitalización de los servicios de salud ha demostrado ser una 
+solución efectiva para estos inconvenientes. La implementación de sistemas web permite 
+automatizar la gestión de citas, llevar un control adecuado de los pacientes y mejorar el 
+seguimiento de tratamientos. Estas herramientas facilitan la organización interna, reducen errores 
+administrativos y mejoran la experiencia del usuario al contar con información clara y disponible 
+en tiempo real. En Guatemala, sin embargo, muchas clínicas veterinarias aún no cuentan con 
+sistemas digitales integrales para este tipo de procesos, lo que representa una oportunidad de 
+mejora mediante la implementación de soluciones tecnológicas. 
+La clínica veterinaria “El Ganadero”, ubicada en la Zona 18 de la Ciudad de Guatemala, 
+presenta actualmente diversas limitaciones en su gestión. La falta de una plataforma estructurada 
+dificulta la administración de citas, el control de tratamientos y la organización de la información 
+de los pacientes. La gestión de citas a través de WhatsApp y el registro manual en documentos 
+físicos generan una carga administrativa elevada, incrementan el riesgo de errores y dificultan el 
+acceso rápido a la información. 
+El desarrollo de un sistema web para la gestión de citas y tratamientos busca resolver 
+estos problemas mediante la implementación de una plataforma digital que permita automatizar 
+la programación de citas, registrar el historial clínico de las mascotas, controlar los tratamientos 
+y centralizar la información en un solo sistema accesible. 
+
+===== PAGE 17 =====
+
+17 
+ 
+ 
+Desde una perspectiva organizacional, la digitalización del servicio permitirá a la clínica 
+mejorar su eficiencia operativa, optimizar el uso de sus recursos y reducir el margen de error en 
+los procesos administrativos. Además, facilitará la atención al cliente, mejorará la calidad del 
+servicio brindado y permitirá una mejor planificación de las actividades diarias. 
+Asimismo, la implementación de este sistema contribuirá a modernizar la clínica 
+veterinaria, mejorar su imagen profesional y aumentar su competitividad en el mercado, 
+permitiendo brindar un servicio más confiable, organizado y acorde a las necesidades actuales de 
+los usuarios. 
+1.3 Objetivos 
+1.3.1 Objetivo General 
+Desarrollar un sistema web para la gestión de citas y tratamientos en una clínica 
+veterinaria que automatice los procesos administrativos, facilite la programación de citas, 
+permita el control eficiente del historial clínico y mejore la atención a los clientes mediante el 
+acceso a información organizada y en tiempo real. 
+1.3.2 Objetivos Específicos 
+a) Analizar los procesos actuales en la gestión de citas y tratamientos en la clínica 
+veterinaria, identificando los factores que afectan la eficiencia operativa y la calidad del 
+servicio. 
+b) Diseñar un sistema web basado en los requerimientos de la clínica, integrando 
+funcionalidades para la gestión de citas, registro de pacientes y control de tratamientos. 
+
+===== PAGE 18 =====
+
+18 
+ 
+ 
+c) Desarrollar una plataforma digital que automatice la programación de citas, el 
+almacenamiento del historial clínico y la administración de la información de los 
+pacientes. 
+d) Implementar el sistema en la clínica veterinaria, asegurando su correcto 
+funcionamiento mediante pruebas y ajustes basados en la retroalimentación del personal. 
+e) Evaluar el impacto del sistema en la clínica, midiendo la reducción de errores 
+administrativos, la mejora en la organización y la satisfacción de los clientes. 
+1.4 Preguntas de la Investigación 
+1. ¿Qué problema se identificó y cómo se pretende dar solución? 
+Se identificó que la clínica veterinaria presenta deficiencias en la gestión de citas y 
+tratamientos, debido a que estos procesos se realizan de forma manual, lo que ocasiona 
+desorganización en horarios, dificultad para controlar la información de los paci entes, 
+errores en los registros y lentitud en la atención. La solución planteada es el desarrollo e 
+implementación de un sistema web que automatice la gestión de citas, permita el registro 
+y seguimiento de tratamientos, centralice la información de los pac ientes y brinde acceso 
+a datos en tiempo real, mejorando así la eficiencia operativa y la atención al cliente. 
+2. ¿Quiénes serán beneficiados al terminar el proyecto? 
+Los principales beneficiarios serán el personal de la clínica veterinaria, quienes 
+podrán optimizar sus procesos y reducir la carga administrativa; así como los clientes, 
+quienes tendrán una mejor organización en sus citas y una atención más rápida y eficiente 
+para sus mascotas. A largo plazo, el sistema también podría beneficiar a otras clínicas 
+veterinarias que deseen implementar una solución similar. 
+
+===== PAGE 19 =====
+
+19 
+ 
+ 
+3. ¿Se utilizará alguna metodología de desarrollo? 
+Sí. El desarrollo se realizará utilizando la metodología RUP (Rational Unified 
+Process), la cual contempla fases de análisis de requerimientos, diseño, desarrollo, pruebas 
+e implementación, permitiendo un desarrollo estructurado y la mejora continua del sistema 
+durante su construcción. 
+4. ¿Cuántas personas se encuentran involucradas? 
+Se encuentran involucradas 3 personas: el desarrollador del sistema, el propietario 
+de la clínica veterinaria y el personal encargado de la atención. 
+5. ¿Cuánto tiempo se necesita para terminarlo? 
+Se necesitan 6 meses para completar el trabajo. 
+6. ¿Los recursos con los que actualmente cuentan son suficientes? 
+Sí. Se cuenta con equipo de cómputo, conexión a internet, herramientas de 
+desarrollo, hosting y dominio para la implementación del sistema, así como el apoyo del 
+personal de la clínica para pruebas y validación, lo que garantiza la factibilidad del 
+proyecto. 
+7. ¿Se capacitará al personal al finalizar el proyecto? 
+Sí. Se brindará una capacitación al personal de la clínica veterinaria para asegurar 
+el correcto uso del sistema, incluyendo la gestión de citas, registro de pacientes, control de 
+tratamientos y uso de reportes. 
+8. ¿Qué beneficios traerá a la empresa el implementar el proyecto? 
+
+===== PAGE 20 =====
+
+20 
+ 
+ 
+La implementación del sistema permitirá mejorar la organización de citas, reducir 
+errores administrativos, optimizar el control de pacientes y tratamientos, mejorar la 
+atención al cliente y fortalecer la imagen profesional de la clínica. 
+9. ¿Cuál es la importancia de implementar este tipo de proyectos? 
+La importancia radica en la modernización de los procesos administrativos de la 
+clínica, permitiendo mejorar la eficiencia, optimizar el tiempo y brindar un servicio más 
+organizado y de mayor calidad a los clientes. 
+10. ¿Se considera que el proyecto pueda ser operativo para la empresa a futuro? 
+Sí. El sistema está diseñado para ser escalable, adaptable a nuevas necesidades y de 
+fácil mantenimiento, lo que permitirá su uso continuo en el futuro y su posible 
+implementación en otras clínicas veterinarias. 
+1.5 Hipótesis 
+¿La implementación de un sistema web para la gestión de citas y tratamientos en la clínica 
+veterinaria permitirá reducir los errores administrativos, mejorar el control de horarios, facilitar el 
+seguimiento de los pacientes y lograr una mayor eficiencia operativa junto con una mejor atención 
+para los clientes? 
+ 
+ 
+
+===== PAGE 21 =====
+
+21 
+ 
+ 
+Capítulo II – Marco Teórico 
+2.1 Evolución de la Medicina Veterinaria en Guatemala 
+La medicina veterinaria en Guatemala ha experimentado una evolución significativa 
+desde sus orígenes empíricos hasta convertirse en una disciplina científica y profesional. Este 
+proceso ha estado influenciado por factores históricos, sociales y académicos que han permitido 
+el desarrollo de instituciones especializadas y la consolidación del ejercicio profesional en el 
+país. 
+2.1.1 Origen e Institución formal 
+La medicina veterinaria tiene sus raíces en las prácticas de los albéitares y mariscales 
+traídos durante la época colonial, quienes se encargaban del cuidado de los caballos como 
+herramientas de transporte y guerra. Sin embargo, la profesionalización científica en el país se 
+consolidó formalmente el 27 de septiembre de 1957 con la creación de la Facultad de Medicina 
+Veterinaria y Zootecnia (FMVZ) de la Universidad de San Carlos de Guatemala. Inicialmente, la 
+carrera funcionó bajo la tutela de la Facultad de Ciencias Médicas para garantizar estándares de 
+salud pública. El Dr. Francisco R. Rodas fue designado como el primer decano interino, 
+basándose en la necesidad de un centro de estudios regional para Centroamérica. El traslado de la 
+unidad académica al campus central de la USAC en 1974 marcó un hito en la infraestructura de 
+investigación animal en el país. 
+A partir de este momento, la medicina veterinaria dejó de ser una práctica basada 
+únicamente en la experiencia para convertirse en una disciplina científica, con impacto en áreas 
+como la salud pública, la producción animal y el control de enfermedades zoonóticas (Ruiz 
+Bode, 1998).  
+
+===== PAGE 22 =====
+
+22 
+ 
+ 
+2.1.2 Desarrollo Gremial y La Práctica Privada Moderna 
+El desarrollo de la medicina veterinaria en Guatemala también ha estado acompañado por 
+la consolidación de organismos que regulan el ejercicio profesional. En este sentido, la creación 
+del Colegio de Médicos Veterinarios y Zootecnistas en 1960 permitió establecer normas éticas y 
+técnicas que garantizan la calidad del servicio prestado, promoviendo el ejercicio responsable de 
+la profesión (Ministerio de Agricultura, Ganadería y Alimentación [MAGA], 2024). 
+En las últimas décadas, la práctica veterinaria ha experimentado una transformación 
+significativa, pasando de un enfoque centrado en la producción pecuaria hacia la atención de 
+animales de compañía. Este cambio responde a una evolución social en la que las mascotas han 
+adquirido un papel más importante dentro del núcleo familiar, lo que ha incrementado la 
+demanda de servicios especializados (Martinez, 2023). 
+Como consecuencia, las clínicas veterinarias han tenido que adaptarse a nuevas 
+exigencias, no solo en términos médicos, sino también administrativos. La necesidad de ofrecer 
+un servicio eficiente, organizado y confiable ha impulsado la adopción de herramientas 
+tecnológicas que permitan mejorar la gestión de la información y optimizar la atención al cliente. 
+2.2 Marco Regulatorio y Legal de las Clínica Veterinarias 
+El funcionamiento de las clínicas veterinarias en Guatemala se encuentra regulado por un 
+conjunto de leyes y normativas que buscan garantizar el bienestar animal y la correcta prestación 
+de los servicios. Estas disposiciones establecen responsabilidades para los profesionales del área 
+y definen los requisitos necesarios para la operación legal de los establecimientos veterinarios. 
+Tabla 1 
+Principios de la Ley de Protección Animal 
+
+===== PAGE 23 =====
+
+23 
+ 
+ 
+Principio Descripción 
+Bienestar animal Protección integral del animal 
+Libertad de dolor Evitar sufrimiento innecesario 
+Libertad de hambre Acceso a alimentación adecuada 
+Libertad de miedo Entorno libre de estrés 
+Nota. Adaptado del “Decreto 5-2017”, por Congreso de la República de Guatemala, 2017 
+(https://www.maga.gob.gt/download/ley-p.pdf). 
+2.2.1 Ley de Protección y Bienestar Animal 
+El ejercicio de la medicina veterinaria en Guatemala se encuentra regulado por el Decreto 
+5-2017, conocido como la Ley de Protección y Bienestar Animal, el cual establece normas de 
+cumplimiento obligatorio para garantizar el trato digno de los animales (Congreso de la 
+República, 2017). Esta ley define principios fundamentales orientados a proteger la integridad 
+física y emocional de los animales, promoviendo prácticas responsables en todos los ámbitos 
+donde estos estén involucrados. Uno de los elementos centrales de esta normativa es la 
+implementación de las denominadas “cinco libertades” del bienestar animal, las cuales 
+constituyen un estándar internacional. Estas incluyen la libertad de hambre, dolor, incomodidad, 
+miedo y la posibilidad de expresar un comportamiento natural. Las clínicas veterinarias tienen la 
+responsabilidad de garantizar el cumplimiento de estos principios en cada uno de sus 
+procedimientos (MAGA, 2017). 
+Además, la ley establece que todo establecimiento veterinario debe contar con un médico 
+veterinario colegiado activo para operar legalmente. Este requisito busca asegurar que los 
+
+===== PAGE 24 =====
+
+24 
+ 
+ 
+servicios brindados cumplan con estándares técnicos adecuados, reduciendo riesgos tanto para 
+los animales como para los propietarios. 
+2.2.2 Control de Medicamentos e Insumos biológicos 
+El manejo de medicamentos veterinarios representa un aspecto crítico dentro de la 
+operación de las clínicas, ya que implica riesgos sanitarios si no se realiza de forma adecuada. En 
+Guatemala, el Ministerio de Agricultura, Ganadería y Alimentación es el encargado de regular 
+estos insumos, verificando su calidad y controlando su distribución (MAGA, 2012). 
+Las clínicas están obligadas a llevar un registro detallado del uso de medicamentos, 
+especialmente en el caso de vacunas, donde se deben documentar datos como el número de lote, 
+fecha de vencimiento y condiciones de almacenamiento. Este proceso permite garantizar la 
+trazabilidad de los productos y prevenir posibles incidentes sanitarios. 
+El incumplimiento de estas normativas puede derivar en sanciones legales, incluyendo 
+multas o la suspensión de la licencia de funcionamiento. Por esta razón, la implementación de 
+sistemas digitales que faciliten el control de inventarios y el registro de tratamientos se presenta 
+como una solución eficiente para cumplir con los requisitos establecidos (Provet Cloud, 2024). 
+Tabla 2 
+Control de Medicamentos Veterinarios 
+Elemento Requisito 
+Registro sanitario Obligatorio 
+Número de lote Identificación del producto 
+
+===== PAGE 25 =====
+
+25 
+ 
+ 
+Elemento Requisito 
+Fecha de vencimiento Control de uso 
+Almacenamiento Condiciones reguladas 
+Nota. Adaptado de “Medicamentos veterinarios y productos afines. Requisitos de registro 
+sanitario y control”, por Ministerio de Agricultura, Ganadería y Alimentación, 2025 
+(https://www.maga.gob.gt/sitios/visar/wp-content/uploads/2025/01/RTCA65055118.pdf). 
+2.3 Problemática en la Gestión de Clínicas 
+Las clínicas veterinarias, especialmente aquellas de pequeña y mediana escala, enfrentan 
+diversas problemáticas relacionadas con la gestión administrativa y el manejo de la información. 
+Estas dificultades se derivan principalmente del uso de procesos manuales y herramientas 
+informales, lo que afecta la eficiencia operativa y la calidad del servicio. 
+2.3.1 Procesos Manuales y Errores Administrativos 
+En muchas clínicas veterinarias de Guatemala, especialmente aquellas de tipo PYME, los 
+procesos administrativos se realizan de manera manual, lo que genera múltiples problemas en la 
+gestión de la información. La dependencia de registros físicos y la memoria del personal 
+incrementa la probabilidad de cometer errores, dificultando la organización y el control de los 
+datos. La falta de estandarización en los procesos provoca inconsistencias en la atención, lo que 
+puede afectar la calidad del servicio brindado. Además, el personal se ve obligado a invertir 
+tiempo en tareas repetitivas, reduciendo su disponibilidad para la atención directa de los 
+pacientes. 
+
+===== PAGE 26 =====
+
+26 
+ 
+ 
+Estudios indican que una proporción significativa de los errores en entornos clínicos está 
+relacionada con fallas en la documentación manual, lo que evidencia la necesidad de 
+implementar soluciones tecnológicas que permitan mejorar la precisión y eficiencia en la gestión 
+de la información (Universidad Nacional de Tucumán, 2024). 
+2.3.2 Uso de WhatsApp y Agendas Físicas 
+El uso de agendas físicas para la gestión de citas es una práctica común, sin embargo, 
+presenta limitaciones importantes. Este tipo de herramientas no permite un control adecuado de 
+la información, lo que puede generar problemas como duplicación de citas o pérdida de datos. 
+Por otro lado, el uso de aplicaciones de mensajería como WhatsApp para la 
+comunicación médica introduce riesgos relacionados con la privacidad de la información. Según 
+estudios sobre el uso de esta herramienta en entornos médicos, su utilización sin controles 
+adecuados puede comprometer la confidencialidad de los datos del paciente. 
+Además, la falta de automatización en los recordatorios de citas contribuye a una alta tasa 
+de inasistencia, afectando la organización interna de la clínica y reduciendo su rentabilidad. Esto 
+refuerza la necesidad de implementar sistemas más estructurados que permitan optimizar estos 
+procesos.   
+Ilustración 1 
+Flujo del proceso manual en clínicas veterinarias 
+
+===== PAGE 27 =====
+
+27 
+ 
+ 
+ 
+Nota. Es una prueba de lo que realizan en la veterinaria y se procede ver la manera de automatizarlo. 
+2.4 Gestión de Clínica y Atención al Paciente 
+La gestión clínica dentro de una veterinaria representa uno de los pilares fundamentales 
+para garantizar una atención adecuada, organizada y continua. No se limita únicamente al acto 
+médico, sino que incluye todos los procesos administrativos, registros y seguimiento del paciente 
+a lo largo del tiempo. Una gestión eficiente permite optimizar recursos, reducir errores y mejorar 
+la calidad del servicio ofrecido. 
+Además, en el contexto actual, donde los clientes demandan rapidez y precisión, la 
+correcta organización de la información clínica se convierte en un factor determinante para la 
+competitividad de la clínica. La incorporación de herramientas tecnológicas en estos procesos no 
+solo facilita el trabajo del personal, sino que también mejora la experiencia del usuario al reducir 
+tiempos de espera y aumentar la confiabilidad de los datos. 
+2.4.1 Historia Clínica Veterinaria 
+La historia clínica veterinaria constituye el documento central en la atención del paciente, 
+ya que en ella se registra toda la información relevante sobre su estado de salud. Este registro 
+incluye datos como identificación del animal, antecedentes médicos, síntomas, diagnósticos y 
+
+
+===== PAGE 28 =====
+
+28 
+ 
+ 
+tratamientos aplicados, lo que permite llevar un control detallado de la evolución del paciente a 
+lo largo del tiempo. 
+Desde el punto de vista profesional, una historia clínica bien estructurada facilita la toma 
+de decisiones, ya que proporciona información clara y organizada que permite al veterinario 
+actuar con mayor precisión. Además, permite identificar patrones en el comportamiento de 
+enfermedades, lo cual es fundamental para establecer diagnósticos adecuados. 
+Por otro lado, este documento también cumple una función legal importante, ya que sirve 
+como respaldo en caso de conflictos o reclamaciones. Según protocolos clínicos, la historia 
+clínica debe conservarse durante varios años, lo que implica la necesidad de contar con sistemas 
+de almacenamiento seguros y confiables (FCV-UBA, 2017). 
+Sin embargo, cuando estos registros se manejan de forma manual, es común que se 
+presenten problemas como pérdida de documentos, ilegibilidad o desorden en la información. 
+Estas limitaciones afectan la calidad del servicio y dificultan el seguimiento adecuado del 
+paciente, lo que refuerza la importancia de implementar sistemas digitales. 
+2.4.2 Clasificación de Urgencias (Triaje) 
+El triaje es un proceso clínico que permite clasificar a los pacientes según la gravedad de 
+su condición, estableciendo un orden de prioridad en la atención. Este sistema es ampliamente 
+utilizado en medicina humana y veterinaria, especialmente en situaciones donde la demanda de 
+servicios supera la capacidad de atención inmediata. Su implementación permite optimizar el uso 
+de los recursos disponibles, asegurando que los casos más críticos sean atendidos de manera 
+prioritaria. Esto no solo mejora la eficiencia del servicio, sino que también reduce el riesgo de 
+complicaciones en pacientes que requieren atención urgente. 
+
+===== PAGE 29 =====
+
+29 
+ 
+ 
+En el ámbito veterinario, el triaje se basa en la evaluación de signos vitales y síntomas 
+clínicos, clasificando a los pacientes en diferentes niveles de urgencia. Esta clasificación facilita 
+la toma de decisiones y permite organizar mejor el flujo de atención dentro de la clínica (Rivas, 
+2022). 
+Además, cuando este proceso se integra en un sistema digital, es posible automatizar 
+ciertos criterios de clasificación, lo que reduce la carga de trabajo del personal y mejora la 
+precisión en la asignación de prioridades. 
+Tabla 3 
+Niveles de Urgencia en Medicina Veterinaria (Protocolo WSAVA). 
+Nivel Prioridad Tiempo Máximo Ejemplos Clínicos 
+1 Roja (Reanimación) Inmediato *Trauma severo 
+reciente (atropello). 
+*Status convulsivo. 
+*Dificultad 
+respiratoria. 
+2 Naranja 
+(Emergencia) 
+15 a 30 minutos *Dificultad para 
+orinar. 
+*Paro distócico. 
+*Fractura reciente. 
+*Reacción alérgica 
+significativa. 
+    
+
+===== PAGE 30 =====
+
+30 
+ 
+ 
+Nivel Prioridad Tiempo Máximo Ejemplos Clínicos 
+3 Amarilla (Urgencia) 30 a 60 minutos *Anorexia. 
+*Signos de dolor. 
+*Lesión o trauma 
+menor (pequeña 
+herida, mordida). 
+4 Verde (Prioritario) 90 minutos *Actualización del 
+progreso de un caso 
+existente. 
+*Cambio en el 
+tratamiento. 
+5 Azul (No urgente) 1 hora a 24 horas *Vacuna. 
+*Controles sanitarios. 
+*Consultas generales. 
+ 
+Nota. Los tiempos de espera están sujetos a la estabilidad de los signos vitales del paciente, por 
+Comisión Nacional de Tenencia Responsable de Mascotas, 2025 
+(https://colmevet.cl/storage/documentos/January2025/ZYZRnqvIWoKMxnwVF45Z.pdf). 
+2.5 Sistema de información en Salud 
+Los sistemas de información en salud han adquirido una gran relevancia en los últimos 
+años debido a la necesidad de gestionar grandes volúmenes de datos de manera eficiente. Estos 
+sistemas permiten recopilar, almacenar y procesar información clínica, facilitando la toma de 
+decisiones en entornos médicos. 
+
+===== PAGE 31 =====
+
+31 
+ 
+ 
+Una de sus principales ventajas es la capacidad de integrar diferentes tipos de 
+información en una sola plataforma, lo que permite tener una visión completa del estado del 
+paciente. Esto incluye datos clínicos, resultados de laboratorio y antecedentes médicos, los 
+cuales pueden ser consultados de forma rápida y precisa. 
+Además, la implementación de estos sistemas contribuye a mejorar la eficiencia 
+operativa, ya que reduce el tiempo necesario para realizar tareas administrativas. La 
+automatización de procesos como la gestión de citas y la generación de reportes permite al 
+personal enfocarse en actividades más relevantes, mejorando así la calidad del servicio. 
+Desde una perspectiva más amplia, los sistemas de información en salud también juegan 
+un papel importante en la vigilancia epidemiológica, ya que permiten identificar patrones y 
+tendencias en la aparición de enfermedades. Esto resulta especialmente relevante en el caso de 
+enfermedades zoonóticas, que pueden afectar tanto a animales como a humanos (OPS, s.f.). 
+Por otro lado, la digitalización de la información contribuye a reducir errores asociados a 
+la documentación manual, como la pérdida de datos o la duplicación de registros. Esto mejora la 
+confiabilidad de la información y facilita su acceso en cualquier momento. 
+Tabla 4 
+Indicadores de Mejora tras la Transformación Digital 
+Área de Impacto Mejora Estimada Causa Técnica 
+Tiempo administrativo 30% Automatización de rutinas 
+repetitivas. 
+Errores médicos 40% Registros legibles y 
+validadores por algoritmos. 
+
+===== PAGE 32 =====
+
+32 
+ 
+ 
+Área de Impacto Mejora Estimada Causa Técnica 
+Fugas de inventario 90% Trazabilidad automática de 
+dosis usadas. 
+Satisfacción del cliente 40% Acceso a citas Online y mejor 
+comunicación. 
+Reducción de costes 
+Operativos 
+10-15% Afecta la calidad del servicio. 
+Reduces cancelaciones de 
+citas con recordatorios 
+automáticos. 
+40% Revisiones manuales, 
+atrasando con el tiempo de 
+cancelar las citas. 
+Nota. Datos basados de “estudios de impacto tecnológico en PYMES del sector salud”, por 
+Sadurní, 2025 (https://revistabalto.com/2025/10/el-impacto-de-la-transformacion-digital-en-una-
+clinica-veterinaria/). 
+2.5.1 Transformación Digital en Pequeñas Empresas 
+La transformación digital se ha convertido en un factor clave para la competitividad de 
+las pequeñas y medianas empresas, incluyendo las clínicas veterinarias. Este proceso implica la 
+incorporación de tecnologías que permiten optimizar los procesos internos, mejorar la atención al 
+cliente y facilitar la toma de decisiones. 
+En el caso de las clínicas veterinarias, la digitalización permite automatizar tareas como 
+la gestión de citas, el control de inventarios y el registro de pacientes. Esto no solo reduce la 
+carga de trabajo del personal, sino que también mejora la precisión de la información y la 
+eficiencia operativa. 
+
+===== PAGE 33 =====
+
+33 
+ 
+ 
+Además, la adopción de tecnologías digitales permite a las clínicas adaptarse a las nuevas 
+exigencias del mercado, donde los clientes demandan servicios rápidos y accesibles. La 
+implementación de sistemas web facilita la interacción con los usuarios y mejora la experiencia 
+del cliente (LACCEI, 2023). 
+2.5.2 Gestión de inventarios en clínicas veterinarias 
+El control de inventarios es un aspecto fundamental en la operación de una clínica 
+veterinaria, ya que permite garantizar la disponibilidad de medicamentos e insumos necesarios 
+para la atención de los pacientes. Una gestión inadecuada puede provocar pérdidas económicas y 
+afectar la calidad del servicio. 
+En muchas clínicas, este proceso se realiza de forma manual, lo que aumenta el riesgo de 
+errores y dificulta el seguimiento de los productos. La falta de control puede generar problemas 
+como vencimiento de medicamentos o desabastecimiento. 
+La implementación de sistemas digitales permite automatizar el control de inventarios, 
+facilitando el registro de entradas y salidas de productos. Esto mejora la eficiencia y reduce el 
+riesgo de errores, contribuyendo a una mejor gestión del negocio (Provet Cloud, 2024). 
+2.5.3 Experiencia del Cliente en Servicios Veterinarios 
+La experiencia del cliente es un factor determinante en la fidelización de usuarios en 
+clínicas veterinarias. Un servicio eficiente, rápido y organizado genera confianza y mejora la 
+percepción del establecimiento. 
+Uno de los principales problemas que afectan la experiencia del cliente es la falta de 
+organización en la gestión de citas, lo que puede generar retrasos y tiempos de espera 
+prolongados. Esto impacta negativamente en la satisfacción del usuario. 
+
+===== PAGE 34 =====
+
+34 
+ 
+ 
+La implementación de sistemas digitales permite mejorar la experiencia del cliente al 
+facilitar la programación de citas y reducir los tiempos de espera. Además, el uso de 
+recordatorios automáticos contribuye a mejorar la asistencia de los pacientes (Janahela, 2025). 
+Fuente: Sadurní (2025). 
+Ilustración 2 
+Ventajas de la Digitalización. 
+ 
+Nota: aquí de atribuye a la información de como digitalizar los sistemas de una empresa y qué 
+cambios atribuye 
+ 
+2.6 Administración y gestión de clínicas veterinarias 
+La administración de una clínica veterinaria implica la coordinación de múltiples 
+procesos que van desde la atención al cliente hasta el control de recursos y personal. Una gestión 
+adecuada permite garantizar la sostenibilidad del negocio, optimizando el uso de los recursos 
+disponibles y mejorando la calidad del servicio ofrecido. 
+
+
+===== PAGE 35 =====
+
+35 
+ 
+ 
+En muchas clínicas, la administración se realiza de forma empírica, lo que genera 
+desorganización y dificultades en el control de las operaciones. La falta de planificación y 
+seguimiento puede provocar problemas como pérdida de ingresos, mala atención al cliente y 
+errores en la gestión de citas. Según estudios sobre administración veterinaria, la correcta 
+organización de los procesos es un factor clave para el crecimiento y desarrollo de este tipo de 
+establecimientos (Guerra Rodríguez, 2019). 
+Por otro lado, la implementación de herramientas tecnológicas permite mejorar la 
+administración, facilitando el control de información y la automatización de tareas. Esto 
+contribuye a una gestión más eficiente, permitiendo al personal enfocarse en actividades de 
+mayor valor. 
+2.7 Importancia de la salud pública veterinaria 
+La medicina veterinaria no solo se enfoca en la atención de animales, sino que también 
+desempeña un papel fundamental en la salud pública. La relación entre la salud animal y la salud 
+humana es estrecha, especialmente en el caso de enfermedades zoonóticas, las cuales pueden 
+transmitirse entre animales y personas. Además, la correcta gestión de la información en clínicas 
+veterinarias permite contribuir a la vigilancia epidemiológica, facilitando la detección temprana 
+de brotes y la implementación de medidas preventivas. Esto refuerza la importancia de contar 
+con sistemas organizados que permitan registrar y analizar datos de manera eficiente. 
+2.8 Tecnología de Desarrollo 
+El desarrollo de soluciones tecnológicas para la gestión de clínicas veterinarias requiere 
+el uso de herramientas modernas que permitan garantizar eficiencia, seguridad y escalabilidad. 
+En este contexto, se emplean diversas tecnologías que facilitan la construcción de sistemas web 
+robustos y funcionales. 
+
+===== PAGE 36 =====
+
+36 
+ 
+ 
+Estas tecnologías no solo facilitan el desarrollo del sistema, sino que también permiten 
+mejorar la experiencia del usuario y asegurar la integridad de la información. La correcta 
+selección de herramientas es fundamental para garantizar el éxito del proyecto y su 
+sostenibilidad a largo plazo. 
+Ilustración 3 
+Flujo de datos por el usuario hacia el sistema. 
+ 
+Nota. Representa el flujo de cómo se comunica el sistema del usuario hacia la base de datos. 
+ 
+2.8.1 Arquitectura MVC 
+El patrón Modelo-Vista-Controlador (MVC) es una arquitectura ampliamente utilizada en 
+el desarrollo de aplicaciones web, ya que permite organizar el sistema de manera estructurada. 
+Este patrón divide la aplicación en tres componentes principales, cada uno con responsabilidades 
+específicas. 
+El modelo se encarga de la gestión de los datos y la lógica del negocio, mientras que la 
+vista es responsable de la presentación de la información al usuario. Por su parte, el controlador 
+actúa como intermediario entre ambos, procesando las solicitudes y coordinando las respuestas. 
+
+
+===== PAGE 37 =====
+
+37 
+ 
+ 
+Esta separación de responsabilidades facilita el mantenimiento del sistema, ya que 
+permite realizar modificaciones en una parte sin afectar el funcionamiento de las demás. 
+Además, mejora la escalabilidad del sistema, permitiendo agregar nuevas funcionalidades de 
+manera ordenada (Curo de la Cruz, 2025). 
+Fuente: García M. (2017) 
+Ilustración 4 
+Modelo Vista Controlador 
+ 
+Nota. Visualizamos con procesos la manera que trabaja el MVC con flujos. 
+El Modelo se encarga de manipular, gestionar y actualizar los datos. Si se utiliza una base 
+de datos aquí es donde se realizan las consultas, búsquedas, filtros y actualizaciones, vista se 
+encarga de mostrarle al usuario final las pantallas, ventanas, páginas y formularios; el resultado 
+de una solicitud. Desde la perspectiva del programador este componente es el que se encarga del 
+
+
+===== PAGE 38 =====
+
+38 
+ 
+ 
+FrontEnd; la programación de la interfaz de usuario si se trata de una aplicación de escritorio, o 
+bien, la visualización de las páginas web (CSS, HTML, HTML5 y Javascript) y el controlador se 
+encarga de gestionar las instrucciones que se reciben, atenderlas y procesarlas. Por medio de él 
+se comunican el modelo y la vista: solicitando los datos necesarios; manipulándolos para obtener 
+los resultados; y entregándolos a la vista para que pueda mostrarlo. 
+2.8.2 BackEnd con Node.js 
+Node.js es un entorno de ejecución que permite utilizar JavaScript en el servidor, lo que 
+facilita el desarrollo de aplicaciones web completas utilizando un solo lenguaje. Su principal 
+característica es el manejo de operaciones asíncronas, lo que permite procesar múltiples 
+solicitudes sin bloquear la ejecución del sistema. 
+Esto resulta especialmente útil en aplicaciones donde se manejan múltiples usuarios 
+simultáneamente, como es el caso de un sistema de gestión de citas. La capacidad de Node.js 
+para manejar múltiples conexiones de forma eficiente lo convierte en una opción ideal para este 
+tipo de proyectos (Prem Khatri, 2017). 
+Además, su integración con APIs REST permite establecer una comunicación eficiente 
+entre el frontend y el backend, facilitando el intercambio de datos. 
+2.8.3 FrontEnd con React 
+React es una biblioteca que permite desarrollar interfaces de usuario dinámicas mediante 
+el uso de componentes reutilizables. Esta característica facilita la organización del código y 
+mejora la mantenibilidad del sistema. 
+
+===== PAGE 39 =====
+
+39 
+ 
+ 
+Una de sus principales ventajas es el uso del DOM virtual, que optimiza el rendimiento al 
+actualizar únicamente los elementos que han cambiado. Esto permite que la aplicación responda 
+de manera rápida a las acciones del usuario, mejorando la experiencia de uso. 
+Además, React permite desarrollar aplicaciones tipo SPA (Single Page Application), lo 
+que evita recargas completas de la página y hace que la navegación sea más fluida (Rootstack, 
+2024). 
+2.8.4 Base de Datos con Microsoft SQL Server 
+El uso de bases de datos relacionales es fundamental para garantizar la integridad de la 
+información en sistemas clínicos. SQL Server es una de las herramientas más utilizadas en este 
+ámbito debido a su robustez y confiabilidad. Este sistema permite almacenar datos de forma 
+estructurada, asegurando que la información sea consistente y accesible en todo momento. 
+Además, cuenta con mecanismos de seguridad que protegen los datos frente a accesos no 
+autorizados. 
+Otra ventaja importante es su capacidad para manejar grandes volúmenes de información, 
+lo que resulta esencial en sistemas que requieren almacenar historiales clínicos y registros de 
+pacientes. 
+Tabla 5 
+Comparación General de Sistemas de Base de datos. 
+Característica SQL Server MySQL PostgreSQL 
+Tipo Relacional Relacional Relacional 
+    
+
+===== PAGE 40 =====
+
+40 
+ 
+ 
+Características SQL Server MySQL PostgreSQL 
+Licencia Comercial (con versión 
+gratuita) 
+Open Source Open Source 
+Facilidad de uso Alta Muy alta Media 
+Rendimiento Alto Alto Muy alto 
+Escalabilidad Alta Media Alta 
+Seguridad Muy alta Alta Muy alta 
+Soporte Oficial (Microsoft) Comunidad y 
+empresarial 
+Comunidad 
+Funciones 
+avanzadas 
+Amplias Limitadas Muy avanzadas 
+Uso común Empresas grandes Aplicaciones web Sistemas 
+complejos 
+Nota. Adaptado de “Comparaciones Técnicas entre Sistemas de Gestores de BD”, por Datdata, 
+2025 (https://www.datdata.com/blog/sql-server-mysql-y-postgresql-cual-elegir). 
+2.8.5 Seguridad y Protección de Datos 
+La seguridad de la información es un aspecto crítico en cualquier sistema que maneje 
+datos sensibles, especialmente en el ámbito de la salud. La implementación de mecanismos de 
+protección permite garantizar la confidencialidad, integridad y disponibilidad de los datos. 
+
+===== PAGE 41 =====
+
+41 
+ 
+ 
+Entre las medidas más importantes se encuentra el cifrado de contraseñas mediante 
+algoritmos de hashing, así como la implementación de controles de acceso que limitan la 
+información según el rol del usuario. 
+Asimismo, es fundamental proteger la información durante su transmisión mediante el 
+uso de protocolos seguros. Estas prácticas no solo protegen a los usuarios, sino que también 
+fortalecen la confianza en el sistema y reducen riesgos asociados a la pérdida de datos. 
+Ilustración 5 
+Captura de Pantalla de SQL Server Local 
+ 
+Nota. Aquí detalla mi configuración de SQL Server para empezar con el sistema web. 
+  
+
+
+===== PAGE 42 =====
+
+42 
+ 
+ 
+Capítulo III – Marco Metodológico 
+3.1 Variables dependientes e independientes 
+3.1.1 Variable Independiente 
+Desarrollo del sistema web para la gestión de clínica veterinaria. 
+3.1.2 Variable Dependiente 
+Eficiencia operativa y calidad en la atención al cliente de la clínica veterinaria. 
+3.1.3 Definición Conceptual 
+• Variable Independiente: Plataforma informática estructurada bajo un patrón 
+arquitectónico MVC, diseñada para centralizar y automatizar la gestión de historiales 
+médicos, programación de citas y control de tratamientos dentro de la clínica veterinaria. 
+• Variable Independiente: Nivel de optimización en los procesos administrativos de la 
+clínica, reflejado en el orden de la información médica, eliminación de sobrecarga laboral 
+y reducción de tiempos de espera para los propietarios de pacientes. 
+3.1.4 Definición Operacional 
+• Variable Independiente: Se medirá a través del registro de uso del sistema en la clínica, 
+contabilizando la cantidad de citas agendadas electrónicamente, expedientes clínicos 
+creados por día y tratamientos registrados en la base de datos. 
+• Variable Dependiente: Se medirá comparando los tiempos promedios en minutos 
+requeridos para agendar una cita y localizar un expediente físico frente al digital. 
+Además, se evaluará la reducción porcentual de errores administrativos y pérdida de 
+información en historiales clínicos. 
+
+===== PAGE 43 =====
+
+43 
+ 
+ 
+3.2 Indicadores 
+“Se comprobó que la automatización de procesos mediante un sistema web permite a la 
+veterinaria optimizar significativamente los tiempos de respuesta en atención. Además, destaca 
+que llevar un control digital mejora la calidad de los servicios brindados a los pacientes y evita 
+problemas críticos diarios, como la pérdida de datos vitales del historial clínico o la duplicación 
+de fichas médicas en formato físico.” (Molina Vera, J. 2016). 
+“Se argumenta que la gestión manual tradicional en las veterinarias se traduce en largos 
+tiempos de espera, desorganización en la agenda y una frecuente pérdida de información. 
+Concluye que implementar una herramienta web integral no solo automatiza de manera fluida el 
+agendamiento de citas, sino que centraliza toda la información de la clínica. Esto permite al 
+médico acceder de forma instantánea a los episodios de enfermedad, tratamientos aplicados y 
+resultados médicos, lo cual es vital para el diagnóstico, ya que erradica por completo el problema 
+de la falta de acceso a la historia médica integral de la mascota al momento de la consulta” 
+(Bermúdez, C. 2025). 
+“Explican en este artículo científico que la digitalización transforma por completo la 
+administración del centro de salud animal. Al registrar en una base de datos web a los dueños, las 
+mascotas, las reservaciones de agenda y los carnets de vacunas, la plataforma garantiza un mejor 
+flujo de atención en recepción y protege la seguridad de la información por medio de 
+credenciales de acceso, modernizando el área médica frente a los antiguos y obsoletos archivos 
+de papel.” (Haz López et al., 2017). 
+3.3 Supuestos 
+La transformación digital trasciende el software de gestión para impregnar el 
+equipamiento médico y las herramientas de diagnóstico. La modernización de los equipos de 
+
+===== PAGE 44 =====
+
+44 
+ 
+ 
+diagnóstico por imagen, como los aparatos de rayos X, ilustra cómo la digitalización simplifica 
+procesos técnicos críticos. El formato digital de los nuevos equipos facilita enormemente la 
+selección de parámetros de exposición (kilovoltaje y miliamperaje), ya que estos suelen estar 
+preprogramados según el área anatómica seleccionada. Grupo Asís.  Recuperado de   
+https://issuu.com/editorialservet/docs/ateuves_109_mr. 
+Más allá de la clínica, el mercado de tecnología para mascotas está experimentando un 
+crecimiento explosivo, con una facturación global estimada en 10.500 millones de euros anuales.  
+Este crecimiento se sustenta en el desarrollo de dispositivos inteligentes que permiten una 
+monitorización continua de la salud del animal fuera del entorno hospitalario. Jesús González, 
+jefe de Prensa, Nota de Prensa. IBerzooProPet. Recuperado de 
+https://www.ifema.es/iberpet/doc/dossier-prensa-iberpet-2026/dossier-prensa-iberpet-2026.pdf 
+La gestión del personal también se ve afectada por factores socioeconómicos profundos. 
+El sector veterinario sufre de salarios históricamente bajos, horarios complicados y un desgaste 
+emocional significativo debido a la naturaleza vocacional de la profesión y la presión de las 
+expectativas de los clientes. En este contexto, la tecnología debe ser vista como una herramienta 
+para aliviar la carga de trabajo y reducir el estrés, no como una fuente adicional de presión. La 
+automatización de tareas monótonas puede liberar tiempo para que el veterinario se centre en lo 
+que realmente le apasiona: la medicina y la cirugía, mejorando así su satisfacción laboral y 
+reduciendo el riesgo de burnout. Grupo Asís.  Recuperado de   
+https://issuu.com/editorialservet/docs/argos_229_mr. 
+ 
+ 
+
+===== PAGE 45 =====
+
+45 
+ 
+ 
+3.4 Enfoque Cuantitativo 
+La presente investigación se desarrollará bajo un enfoque cuantitativo, ya que busca 
+obtener datos concretos y medibles sobre el impacto que tendría la implementación de un sistema 
+web dentro de una clínica veterinaria “El Ganadero”. A través de este enfoque será posible 
+recopilar información numérica relacionada con procesos como el control de historiales clínicos, 
+programación de citas, registro de tratamientos y organización administrativa para el área 
+ubicado en la zona 18 de la Ciudad Capital. 
+Por medio del análisis de estos datos, se pretende identificar si el uso del sistema 
+realmente contribuye a mejorar el funcionamiento de la clínica. En otras palabras, no solo se 
+busca modernizar procesos, sino comprobar si existe una reducción en tiempos de atención, una 
+mejor organización de la información y una disminución en errores administrativos que suelen 
+presentarse cuando los registros se manejan de forma manual. 
+La elección de este enfoque responde directamente a la naturaleza del problema de 
+investigación, ya que el proyecto está orientado a evaluar una solución tecnológica y medir sus 
+resultados de manera objetiva. Esto permitirá comparar información antes y después de la 
+implementación del sistema, obteniendo conclusiones respaldadas en resultados verificables y no 
+únicamente en percepciones. 
+3.4.1 Diseño de la Investigación 
+Se empleará un diseño cuasi-experimental de pre-prueba y post-prueba con un solo 
+grupo. Este diseño es apropiado dado que se implementará el software de gestión en la clínica 
+“El Ganadero” (el grupo de estudio) y se medirán las variables dependientes de interés antes y 
+después de un período de implementación y uso del software. La fase de pre-prueba consistirá en 
+la recolección de datos sobre el estado actual de los procesos de gestión. Posteriormente, se 
+
+===== PAGE 46 =====
+
+46 
+ 
+ 
+implementará el software y, tras un período determinado (por ejemplo, tres meses), se realizará 
+la fase de post-prueba para recolectar los mismos datos. La comparación de los datos obtenidos 
+en ambas fases permitirá analizar el impacto del software en las variables estudiadas. Si bien este 
+diseño no incluye un grupo de control formal (otra ferretería similar que no implemente el 
+software), es práctico para evaluar la efectividad de la intervención en el contexto específico de 
+"Clínica Veterinaria – El Ganadero". 
+3.5 Estimación de Recursos 
+Se realiza una evaluación de los equipos que cuenta el negocio con el fin de validar la 
+factibilidad de utilizarlos para la implementación del sistema. Se determinó que los recursos 
+disponibles cumplen con las características mínimas necesarias, y que pueden complementarse 
+con algunos recursos sugeridos para optimizar la operación y garantizar la estabilidad del 
+sistema. 
+Tabla 6 
+Presupuesto General para el Proyecto de Graduación. 
+Cantidad Equipo Características Costo 
+1 Computadora de escritorio 
+o laptop 
+Procesador i7, 32GB RAM, 
+SSD 1TB, Windows 11. 
+Lo tiene 
+1 Impresora  Solo impresiones de 
+comprobantes y documentos 
+administrativos. 
+Q50.00 
+1 Router Wifi Provee conexión inalámbrica 
+a Internet para equipo 
+locales.  
+Q250.00 
+
+===== PAGE 47 =====
+
+47 
+ 
+ 
+Cantidad Equipo Características Costo 
+5 Puntos de Acceso Conectividad QoS limitado a 
+10 Mbps 
+Q150.00 
+-- Servicio en la nube (Azure). Hosting del sistema web de 
+la API Y SQL Server 
+administrada. 
+Q80.00 
+1 Impresora MultiFuncional Impresiones, Copias y 
+escaneo para agilizar 
+procesos administrativos. 
+Q50.00 
+1 UMG Sede  -- 
+100 Papel Bond tamaño carta Q200.00 
+-- Electricidad y Internet Energía e internet durante el 
+desarrollo del proyecto 
+Q500.00 
+-- Datos Móviles Consumo de datos para 
+investigación y respaldos en 
+la nube. 
+Q100.00 
+-- Análisis Información y pruebas del 
+software. 
+Q100.00 
+Total   Q1,380.00 
+Nota. Son una estimación de lo que se llevará a cabo al implementar el sistema web del proyecto 
+a la empresa. 
+3.6 Planificación Gantt 
+Para un control aproximado, se presenta una lista con el estado actual de las tareas 
+calendarizadas. 
+
+===== PAGE 48 =====
+
+48 
+ 
+ 
+Ilustración 6 
+Diagrama de Gantt -Actividades del proyecto. 
+ 
+Nota. Es una estimación candelarizada del proceso de proyecto de PG1 y PG2. 
+
+
+===== PAGE 49 =====
+
+49 
+ 
+ 
+Referencias 
+Amazon Web Services. (s.f.). ¿Cuál es la diferencia entre SQL y MySQL?. 
+https://aws.amazon.com/es/compare/the-difference-between-sql-and-mysql/ 
+Artieda Rojas, J. R., Ulloa Ulloa, L. A., Raúl Tene Chinlli, J., Patarón Andino, S. P., & Aroca 
+Izurieta, C. E. (2025). Administración y su influencia en la productividad veterinaria. 
+Revista Científica Internacional AranduUTIC. 
+https://doi.org/10.69639/arandu.v12i3.1345 
+Bermudez, C. (25 de septiembre 2023). Desarrollo de sistema web de consultas e inventario 
+para la clínica veterinaria el buen productor. Repositorio Institucional Biblioteca UNI 
+(Nicaragua). Recuperado de: https://ribuni.uni.edu.ni/6842/1/200308.pdf 
+Comisión Nacional de Tenencia Responsable de Mascotas. (2025). Sistema de Triage de 
+Clasificación de Emergencias. 
+https://colmevet.cl/storage/documentos/January2025/ZYZRnqvIWoKMxnwVF45Z.pdf 
+Congreso de la República de Guatemala. (2017). Ley de protección y bienestar animal. 
+https://www.maga.gob.gt/download/ley-p.pdf 
+Curo de la Cruz, W. (2025, febrero 11). Modelo Vista Controlador (MVC). 
+https://blog.walthercuro.com/modelo-vista-controlador-mvc/ 
+Datdata. (2025, marzo 06). SQL Server, MySQL y PostgreSQL: ¿cuál elegir? 
+https://www.datdata.com/blog/sql-server-mysql-y-postgresql-cual-elegir 
+Facultad de Medicina Veterinaria y Zootecnia - USAC. (s.f.). Reseña histórica. 
+https://portal.fmvz.usac.edu.gt/resena-historica/ 
+
+===== PAGE 50 =====
+
+50 
+ 
+ 
+Fazt. (2024, febrero 20). Desarrolla una REST API con Microsoft SQL Server y Node.js. 
+https://fazt.dev/contenido/microsoft-sql-server-nodejs-restapi-crud 
+FCV- UBA. (2017). Histórica Clínica. http://www.fvet.uba.ar/archivos/bancos-
+clinicos/proforma-pequenios-animales.pdf 
+García, M. (2017, octubre 5). MVC (modelo-vista-controlador): ¿qué es y para qué sirve?. 
+Coding or Not. https://codingornot.com/mvc-modelo-vista-controlador-que-es-y-para-
+que-sirve 
+Giordano, M. (2012, septiembre 11). Iniciativa de ley presentada por el representante Juan 
+Manuel Giordano Grajeda. Congreso de la república de Guatemala. 
+https://www.congreso.gob.gt/assets/uploads/info_legislativo/iniciativas/Registro4554.pdf 
+Guerra Rodríguez, V. (2019, noviembre 25). El ABC de la administración en la clínica 
+veterinaria. Pet Industry. https://petindustry.co/gerencia/el-abc-de-la-administracion-en-
+la-clinica-veterinaria/ 
+Haz López, L., Molina Vera, J., & Sánchez Aquino, J. (2017). Implementación de un sistema en 
+la nube para controlar y gestionar procesos clínicos. Caso veterinaria de mascotas. 
+Revista Científica, indexada en Dialnet. Recuperado de: 
+https://dialnet.unirioja.es/descarga/articulo/6034898.pdf 
+Janahela. (2025, septiembre 20). 5 errores que frenan el crecimiento de tu clínica veterinaria (y 
+cómo evitarlos con PetsAdmin). PetsAdmin. https://petsadmin.io/blog/5-errores-que-
+frenan-el-crecimiento-de-tu-clinica-veterinaria-y-como-evitarlos-con-
+petsadmin%F0%9F%90%BE/ 
+
+===== PAGE 51 =====
+
+51 
+ 
+ 
+Gonzalez, J. (2026). Arranca Iberzoo Propet 2026, la gran cita comercial del sector de las 
+mascotas del sur de Europa. IBERzooproPET. https://www.ifema.es/iberpet/doc/dossier-
+prensa-iberpet-2026/dossier-prensa-iberpet-2026.pdf 
+Grupo Asís. (28 de febrero 2024). Nutrición de pacientes geriátricos: claves para un 
+envejecimiento saludable. Atauves. 
+https://issuu.com/editorialservet/docs/ateuves_109_mr 
+Grupo Asís. (26 de mayo 2021). Diagnóstico por imagen. Argos. 
+https://issuu.com/editorialservet/docs/argos_229_mr 
+ Khatri, P. (2017, febrero 17). Por qué algunos desarrolladores prefieren Node.js y ReactJS para 
+el desarrollo de aplicaciones. Chetu. https://www.chetu.com/es/blogs/technical-
+perspectives/nodejs-and-reactjs-for-app-development.php 
+LACCEI International Multi-Conference for Engineering, Education, and Technology. (2023, 
+Julio 17). “Leadership in Education and Innovation in Engineering in the Framework of 
+GlobalTransformations: Integration and Alliances for Integral Development”. 
+https://laccei.org/LACCEI2023-BuenosAires/papers/Contribution_533_a.pdf . Buenos 
+Aires. 
+Martín, M. (2025, enero 17). La importancia de las zoonosis en la salud pública. INESALUD. 
+https://www.inesalud.com/actualidad-sanitaria/investigacion/zoonosis-y-salud-publica  
+Martínez, B. (2023, julio 18). Día del veterinario en Guatemala: historias de vocación y amor 
+hacia los animales. Prensa Libre. https://www.prensalibre.com/vida/salud-y-familia/dia-
+del-veterinario-en-guatemala-historias-de-vocacion-y-amor-hacia-los-animales/ 
+
+===== PAGE 52 =====
+
+52 
+ 
+ 
+Ministerio de Agricultura, Ganadería y Alimentación. (2017, Septiembre 14). Reglamento de la 
+ley de protección y bienestar animal. https://www.maga.gob.gt/download/reglamento-
+p.pdf 
+Ministerio de Agricultura, Ganadería y Alimentación. (2024). Veterinarios y zootecnistas: 
+pilares del bienestar y la salud integral. https://www.maga.gob.gt/veterinarios-y-
+zootecnistas-pilares-del-bienestar-y-la-salud-integral/ 
+Ministerio de Agricultura, Ganadería y Alimentación. (2025). Medicamentos veterinarios y 
+productos afines. Requisitos de registro sanitario y control. 
+https://www.maga.gob.gt/sitios/visar/wp-content/uploads/2025/01/RTCA65055118.pdf 
+Molina Vera, J. C. (2016). Implementación de un sistema web para el control de procesos de la 
+clínica veterinaria mascotas. Repositorio de la Universidad Estatal Península de Santa 
+Elena (UPSE). Recuperado de: http://repositorio.upse.edu.ec/handle/46000/3501 
+Organización Panamericana de la Salud. (s.f.). Sistemas de información para la salud.  OPS. 
+https://www.paho.org/es/temas/sistemas-informacion-para-salud 
+Provet Cloud. (2024, noviembre 25). Cómo elegir un Software de Gestión de Inventario de alta 
+calidad. https://www.provet.com/es/blog/software-gestion-de-inventario-veterinario 
+Qvet. (2023, julio 5). ¿Qué es un programa o software de gestión y por qué tu centro veterinario 
+necesita uno? https://qvet.net/que-es-un-programa-o-software-de-gestion-por-que-tu-
+centro-veterinario-necesita-uno/ 
+Rivas, R. (2022, marzo 24). Triage en urgencias. https://cuasveterinaria.es/blog/triage-en-
+urgencias/ 
+
+===== PAGE 53 =====
+
+53 
+ 
+ 
+Rootstack. (2024). Node.js vs React para desarrollo web. https://rootstack.com/es/blog/nodejs-
+vs-react-crear-sitio-web 
+Ruiz, H. (1998, noviembre). Estudio del conocimiento de la Medicina tradicional y de salud 
+pública de veterinaria en las mujeres Kaqchikeles del Municipio de Patzun, 
+Chimaltenango. http://biblioteca.usac.edu.gt/tesis/10/10_0766.pdf 
+Sadurní, C. (2025, 7 de octubre). El impacto de la transformación digital en una clínica 
+veterinaria. Revista Balto. https://revistabalto.com/2025/10/el-impacto-de-la-
+transformacion-digital-en-una-clinica-veterinaria/ 
+Taller de Historias Clínicas. (2017). Proforma Historia Clínica en Medicina Veterinaria: 
+Pequeños animales [Material didáctico]. Facultad de Ciencias Veterinarias, Universidad 
+de Buenos Aires. https://www.fvet.uba.ar/archivos/bancos-clinicos/proforma-pequenios-
+animales.pdf 
+TV USAC. (2021, septiembre 24). 64 años de fundación de la Facultad de Medicina 
+Veterinaria y Zootecnia [Video]. https://www.youtube.com/watch?v=dcX1KxuqeH8 
+Universidad de San Carlos de Guatemala. (2016, febrero 25). Iniciativa de ley 5034. Congreso de 
+la república de Guatemala. 
+https://www.congreso.gob.gt/assets/uploads/info_legislativo/iniciativas/Registro5034.pdf 
+Universidad Nacional de Tucumán. (2024). Gestión de procesos en una empresa veterinaria. 
+https://face.unt.edu.ar/web/iadmin/wp-content/uploads/sites/2/2024/05/P15-Gestion-de-
+procesos-en-una-empresa-veterinaria_compressed.pdf 
+
+===== PAGE 54 =====
+
+54 
+ 
+ 
+Wikipedia. (2024). Facultad de Medicina Veterinaria y Zootecnia de la Universidad de San 
+Carlos de Guatemala. 
+https://es.wikipedia.org/wiki/Facultad_de_Medicina_Veterinaria_y_Zootecnia_de_la_Un
+iversidad_de_San_Carlos_de_Guatemala 

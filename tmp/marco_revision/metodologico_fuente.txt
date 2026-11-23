@@ -1,0 +1,395 @@
+
+
+===== PAGE 1 =====
+
+CAPÍTULO III – MARCO 
+METODOLÓGICO
+Proyecto de Graduación II
+Ing. Juan Carlos Méndez N.
+
+
+===== PAGE 2 =====
+
+En esta sección se describe detalladamente la
+metodología que se ha utilizado para llevar a cabo la
+investigación, para esto se proporciona una descripción
+detallada y clara del proceso que se ha seguido para llevar a
+cabo la investigación y garantiza la transparencia y rigor
+científico de la misma.
+
+
+===== PAGE 3 =====
+
+3. Análisis de Requerimientos (tomado del Dercas Visión)
+Este proceso consiste en comprender y registrar las necesidades de los usuarios y las expectativas
+del sistema son pasos en el proceso de desarrollo del proyecto. El objetivo principal de un análisis de
+requisitos es identificar, categorizar y definir con precisión los requisitos funcionales y no funcionales
+para el sistema que se creará.
+El desarrollo de dicho proyecto debe contener un conjunto de aspectos específicos, entre los
+cuales están:
+• Análisis y diseño de las entidades relacionadas en base de datos.
+• Análisis y diseño del desarrollo del sistema, comprendiendo los siguientes módulos generales:
+o Describir módulos a utilizar
+o Revisión y corrección de procesos.
+
+
+===== PAGE 4 =====
+
+• Mejoras del sistema. 
+• Implementación del sistema.
+• Mantenimiento del sistema.
+3.1 Antecedentes
+Breve descripción.
+3.2 Impacto
+Amplia descripción.
+3.3 Beneficios
+Este apoyo se proporcionará a través del análisis y desarrollo de un sistema, el cual brindará 
+múltiples herramientas para el control, gestión, administración, automatización de los procesos 
+del negocio.
+
+
+===== PAGE 5 =====
+
+3.4 Referencias
+Son los documentos de base que utiliza la empresa o entidad para realizar sus operaciones.
+Tabla 2 Documentos de Control de Registros de Movimientos
+Agregar los formatos de los documentos de referencias en los anexos de la tesis
+
+
+===== PAGE 6 =====
+
+3.5 Descripción del Problema
+Tabla 3
+Descripción del Problema y Propuesta de Solución
+
+
+===== PAGE 7 =====
+
+3.6 Funcionalidades Requeridas
+Requerimientos de Autenticación de Usuarios (Login)
+Tabla 4
+
+
+===== PAGE 8 =====
+
+Tabla 5
+Requerimientos de Módulo de Reportería
+
+
+===== PAGE 9 =====
+
+3.7 Limitaciones y Restricciones
+• Adaptación del lenguaje y base de datos.
+• No habrá cambio en la fecha de entrega de dicho proyecto.
+3.8 Requerimientos No Funcionales
+Tabla 6
+Descripción de Requerimientos No Funcionales
+
+
+===== PAGE 10 =====
+
+3.9 Análisis de Solución Propuesta
+El análisis, diseño y desarrollo de sistemas comprende en varias etapas, para el presente proyecto
+se utilizará la metodología RUP (Rational Unified Process) la primera etapa consistió en la toma de
+requerimientos, se detalla cada uno de los casos de uso identificados en la etapa antes referida.
+Posteriormente se inició con el diseño de interfaces y modelo de datos, todo lo anterior se realizó con
+el objetivo de que como analistas de sistemas logremos documentar cada etapa del ciclo de vida del
+software y garantizar la creación de una herramienta de calidad.
+
+
+===== PAGE 11 =====
+
+3.10 Alcance
+El desarrollo total del proyecto contempla una serie de pasos estructurados para la correcta
+ejecución de estos, tomando como referencia aspectos clave, entre estos están:
+● Análisis y diseño de las entidades relacionadas en base de datos.
+● Análisis y diseño del desarrollo del sistema, comprendiendo los siguientes módulos generales:
+o Autenticación de usuarios.
+● Revisión y corrección de procesos.
+● Mejoras del sistema.
+● Implementación del sistema.
+● Mantenimiento del sistema.
+3.11 Diseño General del Desarrollo
+El objetivo de esta etapa es definir la arquitectura y la estructura del sistema, así como 
+establecer las decisiones de diseño que guiarán la implementación del software.
+
+
+===== PAGE 12 =====
+
+3.11.1 Casos de Uso
+Se utilizó esta técnica en el análisis y diseño de sistemas de software para capturar y representar las
+interacciones entre los actores (usuarios o sistemas externos) y el sistema en desarrollo. Esto permitirá
+proporcionar una descripción detallada de cómo se utilizará el sistema para lograr un objetivo específico.
+Ilustración 2
+Caso de Uso - Retiro de efectivo de
+cajero automático.
+
+===== PAGE 13 =====
+
+Tabla x
+Especificación de Caso de Uso de retiro de efectivo de cajero automático.
+ID. Req. ID. Caso de uso
+REQ001 CU001
+Descripción
+Este caso de uso nos servirá para realizar el retiro de efectivo 
+de un cajero automático.
+Secuencia Normal
+1. El usuario inserta la tarjeta en el cajero.
+2. El sistema verifica tarjeta. (Excepción 1)
+3. El usuario ingresa su pin.
+4. El sistema verifica pin. (Excepción 2)
+5. El sistema muestra montos a retirar.
+6. El usuario selecciona monto a retirar.
+7. El sistema verifica transacción. (Excepción 3)
+(Excepción 4)
+8. El sistema entrega monto solicitado y disminuye la
+cantidad retirada de la cuenta del usuario.
+9. El usuario retira efectivo y su tarjeta.
+
+===== PAGE 14 =====
+
+REQ001 CU001
+Excepciones
+1. Tarjeta no activa
+• El sistema verifica que la tarjeta insertada no esté activa.
+• El sistema despliega un mensaje indicando que la tarjeta no es válida.
+• Fin del caso de uso.
+2. Pin Incorrecto.
+• El sistema verifica que el pin ingresado no corresponda a la tarjeta.
+• El sistema despliega un mensaje indicando que el pin no es válido.
+• Ir al paso 3 del flujo básico.
+3. No hay saldo suficiente en cuenta.
+• El sistema verifica que el usuario no tiene disponible en su cuenta el monto ingresado.
+• El sistema despliega un mensaje indicando que no se puede realizar la transacción por falta de
+fondos en la cuenta.
+• Ir al paso 5 del flujo básico.
+
+===== PAGE 15 =====
+
+REQ001 CU001
+Excepciones
+4. No hay efectivo disponible en cajero.
+• El sistema verifica que el cajero posee dinero suficiente para cubrir la transacción.
+• El sistema despliega un mensaje indicando que no se puede realizar la transacción
+por falta de efectivo en el cajero.
+• Ir al paso 5 del flujo básico.
+
+===== PAGE 16 =====
+
+3.11.2 Base de Datos
+Ilustración x
+Diseño propuesto para la base de datos, colocar el modelo relacional (puede ser una captura de 
+pantalla legible)
+3.12 Diseño de Elementos
+En esta sección nos referimos a la creación de la apariencia visual y la estructura de los diversos
+componentes que componen una interfaz de usuario, como botones, campos de texto, menús
+desplegables, barras de navegación, entre otros.
+Ilustración No.
+Pantalla Principal del Sistema
+Puede colocar un mockup o bien un screenshot si ya desarrollo el software.
+
+
+===== PAGE 17 =====
+
+Campo
+Valor 
+Por Defecto
+Tipo De
+Campo Observación
+Usuario
+Requerido, 
+Entrada
+Campo de entrada del nombre del 
+usuario
+Contraseña
+Requerido,
+Entrada
+Campo de entrada de la contraseña del
+usuario
+Tabla No.
+Descripción de Campos de Pantalla de Autenticación de Usuarios
+
+===== PAGE 18 =====
+
+3.13 Arquitectura del Software
+Ilustración No.
+Modelo de Arquitectura del Proyecto
+Colocar diagrama.
+
+
+===== PAGE 19 =====
+
+3.14 Factibilidades del Proyecto
+En esta sección se describen las tecnologías y equipos que se requieren para desarrollar e 
+implementar el software, y la justificación del uso de cada uno
+Se detallan las posibilidades o probabilidades con las que el proyecto puede ser llevado a cabo con 
+éxito. Las factibilidades del proyecto fueron evaluadas en diferentes aspectos.
+3.14.1 Factibilidad Técnica
+La factibilidad técnica permitió obtener la información necesaria acerca de si la tecnología
+requerida para implementar el sistema ya existe o si es factible, así como determinar si contamos con las
+herramientas y software mínimos y si son accesibles para su desarrollo e implementación.
+
+
+===== PAGE 20 =====
+
+Descripción Motivo
+Lenguaje de Programación (describir) Código Fuente
+IDE IDE para desarrollo
+Framework Tecnología para software de (describir)
+Formularios en ambiente Diseño Gráfico del sistema
+Herramienta de Reportes Diseño y generación de reportes
+Base de Datos Base de datos para almacenar la información
+Cliente/manejador de BD Administración de la base de datos
+Tabla No.
+Resumen de Factibilidades de Software
+
+===== PAGE 21 =====
+
+Descripción Requisitos
+Equipo de cómputo
+Describir los requisitos necesarios para el funcionamiento del
+software
+Impresoras Si aplica agregar descripción.
+Servidor Describir
+Tabla No.
+Resumen de Factibilidades de Hardware
+
+===== PAGE 22 =====
+
+3.14.2 Factibilidad Operativa
+En esta sección nos referimos a la capacidad o alcance del proyecto, las funcionalidades y estándares
+que debe cumplir, esto para ser implementado, operado de manera efectiva y eficiente en la práctica.
+3.14.3 Factibilidad Económica
+La factibilidad de implementación del sistema en términos de los costos involucrados en su
+desarrollo y uso está determinada por su factibilidad económica. Además, se debe demostrar que los
+costos asociados con el desarrollo y puesta en funcionamiento de este sistema superan las ventajas que se
+obtendrán con su implementación.
+● Costos de Personal
+La propuesta no estima que se deben realizar gastos adicionales en tema de costos de personal.  
+
+
+===== PAGE 23 =====
+
+● Costos de desarrollo
+El sistema por desarrollar será realizado por un alumno de la Universidad Mariano
+Gálvez de Guatemala en proceso previo a optar al título de INGENIERO EN
+SISTEMAS DE INFORMACIÓN Y CIENCIAS DE LA COMPUTACIÓN. Por este
+motivo y de acuerdo con la empresa los costos asociados al desarrollo del sistema son
+nulos.
+● Costos de hardware
+Teniendo en cuenta que el negocio posee el equipo necesario, los costos asociados a
+hardware son nulos, es decir, cuenta con los equipos informáticos necesarios para
+implementar el software.
+
+
+===== PAGE 24 =====
+
+● Costos de Software
+Teniendo en consideración que el proyecto se realizará con fines
+académicos, este se desarrollará con herramientas y aplicaciones con licencias
+gratuitas, adicionalmente el negocio ya cuenta con equipos tecnológicos para la
+implementación del sistema, por lo que en esta área los gatos para el estudiante
+y dueño del negocio son nulos.
+
+
+===== PAGE 25 =====
+
+Tipo de Costo Descripción Valor
+Costo de Personal Equipo de Trabajo para el
+desarrollo del proyecto. Sin Costo
+Costos de Desarrollo Análisis del Proyecto
+Diseño del Sistema
+Desarrollo del Sistema
+Implementación del Sistemas
+Pruebas (Testing QA)
+Sin Costo
+Costos de Hardware
+Equipo de Cómputo Sin Costo
+Agregar lo que considere necesario
+Costos de Software
+Licencia de… Sin Costo
+ValorTotal del Proyecto Sin Costos
+Tabla No.
+Resumen General de los Costos Reales del Proyecto
+
+===== PAGE 26 =====
+
+3.14.4 Factibilidad Legal
+En esta sección nos referiremos a la capacidad del proyecto para cumplir con todas las leyes y 
+regulaciones aplicables en el ámbito en el que se desarrolla. Esto incluye leyes y regulaciones a nivel 
+local, nacional e internacional que puedan afectar al proyecto. Es importante que el proyecto cumpla 
+con todas las leyes y regulaciones aplicables para evitar problemas legales y financieros.
+3.14.4.1 Licenciamientos de Softwares para el Desarrollo del Proyecto
+• Describir todas las licencias que va a utilizar en el desarrollo del software, incluyendo licencias de 
+IDE’s, motores de bases de datos, entre otros.
+3.14.4.2 Régimen Legal Nacional
+• Describir si aplica
+
+
+===== PAGE 27 =====
+
+3.14.4.3 Acuerdos de Entrega del Proyecto
+Objetivo del Proyecto:.
+Fecha de Entrega: se le notificó que la empresa que en base a los tiempos establecidos por la
+Universidad, el software se estará implementando y puesto en operación en el periodo comprendido
+entre el mes de septiembre y octubre del año 2023, que es el tiempo que tiene se tiene como estudiante
+para finalizar con el proyecto.
+Mantenimiento Correctivo y Mejoras: se acordó con el dueño del negocio que se establecerán 30
+días a partir de la entrega del software, en el que se le brindará soporte técnico para realizar
+adecuaciones, mejoras y actualizaciones al sistema, esto para resolver errores que puedan surgir y dejar
+el sistema estable y apto para operar, luego de esos 30 días si el negocio requiere seguir recibiendo
+soporte técnico, queda a discreción del estudiante y del dueño del negocio poder establecer nuevas
+estrategias externas a este proyecto para el brindarle el servicio.
+
+
+===== PAGE 28 =====
+
+3.14.5 Factibilidad Ambiental
+En esta sección nos referimos a la evaluación de la viabilidad ambiental del proyecto, esto
+implica la evaluación de los posibles impactos ambientales que podrían resultar del proyecto o
+actividad propuesta y la determinación de los impactos que pueden ser mitigados o reducidos a un
+nivel aceptable.
+3.14.5.1 Reducción de hojas de papel
+3.15 Recursos del Proyecto 
+Se realizó una evaluación de los equipos con los que cuenta el negocio, esto para validar la 
+factibilidad de utilizar esos equipos para la implementación del proyecto y determinó que cuentas 
+con la disponibilidad de sus equipos tienen algunas características necesarias y otras mínimas para 
+utilizarse.
+
+
+===== PAGE 29 =====
+
+Cantidad Equipo Características
+1
+Computadoras de
+Escritorio
+1 Servidor de Torre
+1 Impresora Solo impresiones
+Puntos de red 
+Tabla No.
+Recursos Disponibles
+
+===== PAGE 30 =====
+
+Cantidad Equipo Características
+1
+Computadoras de Escritorio o Laptops
+1 Servidor de Rack
+1 Impresora multiusos Impresiones y Escáner
+1
+Router Wifi para red inalámbrica Implementación de
+computadoras laptops
+Tabla No.
+Recursos Sugeridos
+
+===== PAGE 31 =====
+
+3.16 Cronograma de Actividades del Proyecto 
+Ilustración No.
+(Horizontal)
+Cronograma de Actividades
+
+
+===== PAGE 32 =====
+
+FIN

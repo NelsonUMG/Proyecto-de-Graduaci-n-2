@@ -1,0 +1,11 @@
+IF DB_ID('VeterinariaDB') IS NULL
+BEGIN
+    CREATE DATABASE VeterinariaDB;
+END
+GO
+
+ALTER DATABASE VeterinariaDB SET READ_COMMITTED_SNAPSHOT ON;
+GO
+
+USE VeterinariaDB;
+GO

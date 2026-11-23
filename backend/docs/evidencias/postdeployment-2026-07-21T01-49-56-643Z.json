@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-07-21T01:49:56.643Z",
+  "target": "http://localhost:4000",
+  "environment": "production",
+  "database": "VeterinariaDB",
+  "dbMode": "sql-server",
+  "summary": {
+    "checks": 13,
+    "passed": 13,
+    "failed": 0,
+    "healthSamples": 20,
+    "healthAverageMs": 13.68,
+    "healthP95Ms": 8.08,
+    "healthMinMs": 3.93,
+    "healthMaxMs": 170.67
+  },
+  "checks": [
+    {
+      "name": "SQL Server disponible",
+      "passed": true,
+      "status": 200,
+      "elapsedMs": 13.68,
+      "detail": "VeterinariaDB mediante DESKTOP-6HMR73Q\\Nelson"
+    },
+    {
+      "name": "Carga directa /cliente/acceso",
+      "passed": true,
+      "status": 200,
+      "elapsedMs": 5.56,
+      "detail": "SPA disponible por URL directa"
+    },
+    {
+      "name": "Carga directa /empleado/acceso",
+      "passed": true,
+      "status": 200,
+      "elapsedMs": 4.01,
+      "detail": "SPA disponible por URL directa"
+    },
+    {
+      "name": "Carga directa /admin/acceso",
+      "passed": true,
+      "status": 200,
+      "elapsedMs": 3.15,
+      "detail": "SPA disponible por URL directa"
+    },
+    {
+      "name": "Login en portal administrativo",
+      "passed": true,
+      "status": 200,
+      "elapsedMs": 153.34,
+      "detail": "Rol obtenido: Administrador"
+    },
+    {
+      "name": "Login en portal de personal",
+      "passed": true,
+      "status": 200,
+      "elapsedMs": 104.24,
+      "detail": "Rol obtenido: Empleado"
+    },
+    {
+      "name": "Login en portal de clientes",
+      "passed": true,
+      "status": 200,
+      "elapsedMs": 100.24,
+      "detail": "Rol obtenido: Cliente"
+    },
+    {
+      "name": "Bloqueo de empleado en login administrativo",
+      "passed": true,
+      "status": 403,
+      "elapsedMs": 106.29,
+      "detail": "Debe responder 403"
+    },
+    {
+      "name": "Administrador consulta usuarios",
+      "passed": true,
+      "status": 200,
+      "elapsedMs": 9.04,
+      "detail": "Permiso usuarios.gestionar"
+    },
+    {
+      "name": "Administrador consulta evaluacion",
+      "passed": true,
+      "status": 200,
+      "elapsedMs": 8.03,
+      "detail": "Permiso evaluacion.gestionar"
+    },
+    {
+      "name": "Empleado bloqueado en usuarios",
+      "passed": true,
+      "status": 403,
+      "elapsedMs": 4.44,
+      "detail": "Debe responder 403"
+    },
+    {
+      "name": "Cliente consulta su portal",
+      "passed": true,
+      "status": 200,
+      "elapsedMs": 20.88,
+      "detail": "Datos limitados al cliente autenticado"
+    },
+    {
+      "name": "Cliente bloqueado en directorio",
+      "passed": true,
+      "status": 403,
+      "elapsedMs": 4.64,
+      "detail": "Debe responder 403"
+    }
+  ]
+}

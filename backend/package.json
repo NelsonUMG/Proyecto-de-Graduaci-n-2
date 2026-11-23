@@ -1,0 +1,35 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "node --watch ./bin/www",
+    "check": "node -c ./src/app.js",
+    "test": "node --test --test-concurrency=1",
+    "posttest:deployment": "node ./scripts/postdeploy.js",
+    "mail:verify": "node ./scripts/verify-mail.js",
+    "credentials:provision": "node ./scripts/provision-demo-credentials.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "debug": "~2.6.9",
+    "dotenv": "^17.3.1",
+    "express": "^4.22.2",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.2.0",
+    "joi": "^18.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.11.0",
+    "msnodesqlv8": "^5.2.3",
+    "mssql": "^12.2.0",
+    "multer": "^2.4.0",
+    "nodemailer": "^10.1.0",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.4"
+  }
+}

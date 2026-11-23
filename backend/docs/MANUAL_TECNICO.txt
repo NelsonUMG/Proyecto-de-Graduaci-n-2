@@ -1,0 +1,124 @@
+MANUAL TECNICO
+Sistema Web Veterinaria El Ganadero
+
+1. ARQUITECTURA
+
+- Frontend: React y Vite en frontend/.
+- Backend: Node.js y Express en backend/src/.
+- Persistencia: Microsoft SQL Server en VeterinariaDB.
+- Repositorio SQL: backend/src/repositories/sqlRepository.js.
+
+SQL Server es obligatorio. No existe modo de datos en memoria. El frontend no
+realiza consultas SQL ni contiene reglas de autorizacion.
+
+2. ACCESOS
+
+- Cliente: /cliente/acceso
+- Empleado: /empleado/acceso
+- Administrador: /admin/acceso
+
+No existe una pagina que liste los tres portales. La ruta / lleva solamente a
+clientes. El backend verifica el rol en el login y los permisos en cada endpoint.
+
+En nube se recomiendan los subdominios citas, personal y admin. Los hosts exactos
+pueden configurarse con VITE_CLIENT_HOST, VITE_EMPLOYEE_HOST y VITE_ADMIN_HOST.
+
+3. VARIABLES PRINCIPALES
+
+NODE_ENV=production
+PORT=4000
+FRONTEND_URL=https://citas.sudominio.com,https://personal.sudominio.com,https://admin.sudominio.com
+JWT_SECRET=secreto-largo-y-exclusivo
+JWT_EXPIRES_IN=8h
+SESSION_COOKIE_NAME=vet_session
+DB_ENABLED=true
+DB_AUTH=windows
+DB_DRIVER=ODBC Driver 18 for SQL Server
+DB_SERVER=localhost
+DB_DATABASE=VeterinariaDB
+DB_ENCRYPT=false
+DB_TRUST_CERT=true
+
+Para autenticacion SQL usar DB_AUTH=sql y completar DB_USER y DB_PASSWORD.
+
+4. CONEXION SQL SERVER
+
+La conexion esta en backend/src/config/db.js. En autenticacion integrada se usa
+mssql/msnodesqlv8 y ODBC Driver 18. La cuenta que ejecuta Node debe tener permisos
+sobre VeterinariaDB.
+
+Instalacion completa: abrir backend/sql/00_EJECUTAR_TODO_VeterinariaDB.sql en
+SSMS, activar SQLCMD Mode y ejecutar. El script 07 agrega MedicionesImpacto e
+indices de produccion.
+
+5. SEGURIDAD
+
+- Hash bcrypt para contrasenas.
+- JWT en cookie HttpOnly, SameSite=Strict y Secure en produccion.
+- Autorizacion por roles y permisos.
+- Bloqueo progresivo cada cinco fallos: 10, 30, 60, 90 y 120 minutos.
+- Recuperacion por correo con token de un solo uso y vencimiento de 30 minutos.
+- Cambio de clave invalida las sesiones emitidas anteriormente.
+- Helmet, CORS, rate limiting y limite de 1 MB por solicitud.
+- Joi y consultas SQL parametrizadas.
+- Auditoria en SQL Server.
+- Transacciones serializables para citas, inventario y ventas.
+
+6. EJECUCION
+
+Desarrollo:
+
+  cd backend
+  npm run dev
+
+  cd frontend
+  npm run dev
+
+Produccion local:
+
+  .\scripts\Preparar-Produccion.ps1
+  .\scripts\Iniciar-Produccion.ps1
+
+React compilado y API se sirven desde http://localhost:4000.
+
+7. PRUEBAS
+
+Backend:
+
+  cd backend
+  npm test
+  npm run check
+
+Frontend:
+
+  cd frontend
+  npm run lint
+  npm run build
+  npm audit --omit=dev
+
+Postdespliegue:
+
+  cd backend
+  npm run posttest:deployment
+
+El postest requiere credenciales en TEST_ADMIN_USER, TEST_ADMIN_PASSWORD,
+TEST_EMPLOYEE_USER, TEST_EMPLOYEE_PASSWORD, TEST_CLIENT_USER y
+TEST_CLIENT_PASSWORD. La evidencia se guarda en docs/evidencias/.
+
+8. EVALUACION PRE/POST
+
+El administrador registra mediciones reales en /admin/evaluacion. Se comparan
+tiempos de agenda y busqueda, errores, citas duplicadas y satisfaccion. No se
+incluyeron resultados ficticios.
+
+9. RESPALDO
+
+Programar respaldos completos de VeterinariaDB y probar su restauracion. No basta
+con generar archivos .bak; la prueba de restauracion debe formar parte de la
+entrega operativa.
+
+10. PUBLICACION EN NUBE
+
+Se requiere servidor, SQL Server, dominio, DNS y certificado TLS. Usar un proxy
+HTTPS delante de Node, no exponer SQL Server a Internet y ejecutar Node con una
+cuenta de servicio de minimo privilegio. Consultar DESPLIEGUE_Y_PRUEBAS.md.

@@ -1,0 +1,87 @@
+REPORTE DE IMPLEMENTACION
+Sistema Web Veterinaria El Ganadero
+
+1. OBJETIVO
+
+Centralizar clientes, mascotas, citas, historial clinico, tratamientos, vacunas,
+inventario, ventas, reportes y usuarios de la Clinica Veterinaria El Ganadero.
+
+2. IMPLEMENTACION TECNICA
+
+- React y Vite para la interfaz.
+- Node.js y Express para la API REST.
+- SQL Server VeterinariaDB como persistencia obligatoria.
+- mssql/msnodesqlv8 y ODBC Driver 18 para autenticacion integrada de Windows.
+- bcrypt, JWT, Helmet, CORS, rate limiting y Joi para seguridad.
+
+Se retiro el almacenamiento en memoria. Clientes, usuarios, mascotas, citas,
+historial, inventario, ventas, auditoria y mediciones operativas se leen y escriben
+en SQL Server.
+
+3. ACCESO POR TIPO DE USUARIO
+
+El sistema usa tres URLs sin selector comun:
+
+- /cliente/acceso
+- /empleado/acceso
+- /admin/acceso
+
+Cada endpoint de login valida que la cuenta pertenezca al portal. Luego, cada
+operacion vuelve a validar el permiso. Conocer una URL no concede acceso.
+
+La sesion se almacena en una cookie HttpOnly, no en localStorage. Para nube quedaron
+preparados subdominios citas.*, personal.* y admin.*.
+
+4. MODULOS
+
+- Dashboard y reportes.
+- Clientes, mascotas, especies y razas.
+- Citas y clasificacion de riesgo.
+- Historial clinico, tratamientos y vacunas.
+- Productos, movimientos de inventario, servicios y ventas.
+- Usuarios, roles, permisos, configuracion y auditoria.
+- Portal de cliente para mascotas y solicitudes de cita.
+- Evaluacion cuantitativa preimplementacion/postimplementacion.
+
+5. INTEGRIDAD Y CONCURRENCIA
+
+Las citas validan disponibilidad dentro de una transaccion serializable. Inventario
+y ventas bloquean los registros involucrados y revierten toda la operacion si falta
+stock o aparece un dato invalido. Las consultas usan parametros SQL.
+
+6. PRUEBAS EJECUTADAS
+
+- 14 pruebas automatizadas: 14 aprobadas y 0 fallidas.
+- 14 controles postdespliegue: 14 aprobados y 0 fallidos.
+- 20 muestras del endpoint de salud conectado a VeterinariaDB.
+- Promedio local: 10.52 ms; p95: 6.7 ms; maximo observado: 132.77 ms.
+- Frontend: lint y compilacion de produccion aprobados.
+- Dependencias: 0 vulnerabilidades de produccion en ambos proyectos.
+- Navegador: 0 errores de consola.
+- Movil: 0 de 17 controles fuera del ancho y sin desbordamiento horizontal.
+
+La evidencia reproducible se encuentra en:
+backend/docs/evidencias/postdeployment-latest.json
+
+7. EVALUACION DE IMPACTO
+
+Se creo dbo.MedicionesImpacto y la pantalla administrativa Evaluacion. El sistema
+calcula reduccion porcentual de tiempos, errores y citas duplicadas, ademas del
+cambio de satisfaccion. No se inventaron cifras pre/post; deben recopilarse con
+usuarios reales bajo el protocolo documentado.
+
+8. ESTADO DE DESPLIEGUE
+
+La compilacion esta levantada localmente en modo produccion en el puerto 4000 y usa
+la base local VeterinariaDB. Para publicacion externa aun se requiere definir el
+proveedor de nube, dominio, DNS, certificado TLS y credenciales del servidor.
+
+9. RECOMENDACIONES DE ENTREGA
+
+- Rotar todas las contrasenas iniciales.
+- Usar JWT_SECRET exclusivo y largo.
+- Ejecutar Node y SQL con cuentas de minimo privilegio.
+- Forzar HTTPS y no publicar el puerto SQL.
+- Automatizar respaldos y probar restauracion.
+- Ejecutar postpruebas despues de cada despliegue.
+- Registrar muestras pre y post reales antes de afirmar mejoras operativas.

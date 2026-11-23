@@ -1,0 +1,66 @@
+GUIA SQL SERVER - VeterinariaDB
+
+1. BASE CORRECTA
+
+El sistema usa la base:
+VeterinariaDB
+
+Antes los scripts apuntaban a otra base. Ya fueron ajustados para coincidir con
+la base que aparece en SSMS.
+
+2. OBJETOS INSTALADOS
+
+Se ejecuto la instalacion local con sqlcmd y quedaron creados:
+
+- 25 tablas, incluidas MedicionesImpacto y PasswordResetTokens
+- procedimientos almacenados del sistema
+- 6 vistas
+- triggers de auditoria
+- datos semilla
+
+3. COMO VERLOS EN SSMS
+
+1. Abrir SQL Server Management Studio.
+2. Conectar a localhost.
+3. Ir a Databases > VeterinariaDB.
+4. Clic derecho en Tables y seleccionar Refresh.
+5. Clic derecho en Programmability y seleccionar Refresh.
+6. Abrir Stored Procedures para ver los sp_ del sistema.
+
+4. SCRIPT MAESTRO
+
+Archivo:
+backend/sql/00_EJECUTAR_TODO_VeterinariaDB.sql
+
+En SSMS:
+1. Abrir el archivo.
+2. Activar Query > SQLCMD Mode.
+3. Ejecutar.
+
+5. COMANDOS DE VERIFICACION
+
+Tablas:
+command: sqlcmd -S localhost -E -C -d VeterinariaDB -Q "SELECT name FROM sys.tables ORDER BY name;"
+
+Procedimientos:
+command: sqlcmd -S localhost -E -C -d VeterinariaDB -Q "SELECT name FROM sys.procedures ORDER BY name;"
+
+Usuarios demo:
+command: sqlcmd -S localhost -E -C -d VeterinariaDB -Q "SELECT u.UsuarioId, u.Usuario, u.Email, r.Nombre AS Rol, u.ClienteId FROM dbo.Usuarios u INNER JOIN dbo.Roles r ON r.RolId = u.RolId;"
+
+6. CUENTAS INICIALES
+
+Personal interno:
+Usuario: admin
+Contrasena: Admin123!
+
+Empleado:
+Usuario: empleado
+Contrasena: Empleado123!
+
+Portal cliente:
+Usuario: cliente
+Contrasena: Cliente123!
+
+Estas credenciales son solo para instalacion y pruebas locales. Deben cambiarse
+antes de entregar o publicar el sistema.

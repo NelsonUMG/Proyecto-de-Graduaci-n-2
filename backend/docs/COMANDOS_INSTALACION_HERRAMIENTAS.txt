@@ -1,0 +1,281 @@
+COMANDOS DE INSTALACION DE HERRAMIENTAS
+Proyecto: Sistema Web para gestion de citas y tratamientos veterinarios
+Sistema base: Windows 11
+
+Nota:
+Este archivo guarda los comandos usados o necesarios para instalar herramientas,
+dependencias y ejecutar el proyecto. Algunos programas como SQL Server, SQL Server
+Management Studio y Node.js tambien pueden instalarse desde sus sitios oficiales.
+
+
+1. VERIFICACION DE NODE.JS Y NPM
+
+Node.js:
+command: node -v
+
+npm:
+command: npm -v
+
+
+2. CREACION DEL FRONTEND CON REACT Y VITE
+
+Crear proyecto React con Vite:
+command: npm create vite@latest frontend -- --template react
+
+Entrar a la carpeta frontend:
+command: cd frontend
+
+Instalar dependencias base del frontend:
+command: npm install
+
+
+3. DEPENDENCIAS DEL FRONTEND
+
+React:
+command: npm install react react-dom
+
+Vite:
+command: npm install -D vite @vitejs/plugin-react
+
+Axios para consumir la API REST:
+command: npm install axios
+
+React Router para rutas del sistema:
+command: npm install react-router-dom
+
+Iconos lucide para la interfaz:
+command: npm install lucide-react
+
+ESLint para revision de codigo:
+command: npm install -D eslint @eslint/js eslint-plugin-react-hooks eslint-plugin-react-refresh globals
+
+
+4. CSS Y ESTILOS
+
+CSS:
+command: No requiere instalacion por npm cuando se usa CSS nativo.
+
+Archivo CSS principal:
+command: frontend/src/index.css
+
+Archivo CSS de componentes principales:
+command: frontend/src/App.css
+
+
+5. EJECUCION DEL FRONTEND
+
+Entrar a frontend:
+command: cd frontend
+
+Levantar servidor de desarrollo:
+command: npm run dev
+
+Generar build de produccion:
+command: npm run build
+
+Vista previa del build:
+command: npm run preview
+
+Ejecutar revision con ESLint:
+command: npm run lint
+
+
+6. CREACION DEL BACKEND CON NODE.JS Y EXPRESS
+
+Entrar a backend:
+command: cd backend
+
+Inicializar package.json:
+command: npm init -y
+
+Instalar dependencias base del backend:
+command: npm install
+
+Instalar Express:
+command: npm install express
+
+
+7. DEPENDENCIAS DEL BACKEND
+
+Express:
+command: npm install express
+
+Driver de SQL Server para Node.js:
+command: npm install mssql
+
+Variables de entorno:
+command: npm install dotenv
+
+CORS:
+command: npm install cors
+
+Helmet para cabeceras de seguridad:
+command: npm install helmet
+
+Rate limit para proteger login y API:
+command: npm install express-rate-limit
+
+Hash de contrasenas con bcryptjs:
+command: npm install bcryptjs
+
+Hash de contrasenas con bcrypt, alternativa:
+command: npm install bcrypt
+
+JWT para autenticacion:
+command: npm install jsonwebtoken
+
+Validacion de datos:
+command: npm install joi
+
+Logger HTTP:
+command: npm install morgan
+
+Cookie parser:
+command: npm install cookie-parser
+
+Nodemon para desarrollo:
+command: npm install -D nodemon
+
+Instalacion completa recomendada para backend:
+command: npm install express mssql dotenv cors helmet express-rate-limit bcryptjs jsonwebtoken joi morgan cookie-parser
+
+Instalacion completa recomendada de desarrollo:
+command: npm install -D nodemon
+
+
+8. EJECUCION DEL BACKEND
+
+Entrar a backend:
+command: cd backend
+
+Ejecutar backend con script start:
+command: npm start
+
+Ejecutar backend en desarrollo:
+command: npm run dev
+
+Ejecutar backend con nodemon:
+command: npx nodemon ./bin/www
+
+
+9. VARIABLES DE ENTORNO
+
+Crear archivo .env.example en backend:
+command: ni backend/.env.example
+
+Crear archivo .env.example en frontend:
+command: ni frontend/.env.example
+
+Copiar ejemplo de variables backend a .env:
+command: copy backend\\.env.example backend\\.env
+
+Copiar ejemplo de variables frontend a .env:
+command: copy frontend\\.env.example frontend\\.env
+
+
+10. SQL SERVER Y BASE DE DATOS
+
+Instalar SQL Server Express con winget:
+command: winget install Microsoft.SQLServer.2022.Express
+
+Instalar SQL Server Management Studio con winget:
+command: winget install Microsoft.SQLServerManagementStudio
+
+Verificar servicio de SQL Server:
+command: Get-Service *SQL*
+
+Abrir SQL Server Management Studio:
+command: ssms
+
+Ejecutar scripts SQL:
+command: Abrir SSMS, conectar al servidor local y ejecutar los scripts de la carpeta SCRIPTS DE BASE DE DATOS o backend/sql.
+
+Ejecutar todo SQL Server desde PowerShell con sqlcmd:
+command: sqlcmd -S localhost -E -C -b -i backend\\sql\\01_database.sql
+command: sqlcmd -S localhost -E -C -b -i backend\\sql\\02_tables.sql
+command: sqlcmd -S localhost -E -C -b -i backend\\sql\\03_stored_procedures.sql
+command: sqlcmd -S localhost -E -C -b -i backend\\sql\\04_views.sql
+command: sqlcmd -S localhost -E -C -b -i backend\\sql\\05_triggers.sql
+command: sqlcmd -S localhost -E -C -b -i backend\\sql\\06_seed_data.sql
+
+Ejecutar script maestro en SSMS:
+command: Abrir backend\\sql\\00_EJECUTAR_TODO_VeterinariaDB.sql, activar Query > SQLCMD Mode y ejecutar.
+
+Verificar tablas creadas en VeterinariaDB:
+command: sqlcmd -S localhost -E -C -d VeterinariaDB -Q "SELECT name FROM sys.tables ORDER BY name;"
+
+Verificar procedimientos almacenados creados:
+command: sqlcmd -S localhost -E -C -d VeterinariaDB -Q "SELECT name FROM sys.procedures ORDER BY name;"
+
+
+11. SEGURIDAD Y AUDITORIA DE DEPENDENCIAS
+
+Revisar vulnerabilidades npm en frontend:
+command: cd frontend
+command: npm audit
+
+Corregir vulnerabilidades npm en frontend:
+command: npm audit fix
+
+Revisar vulnerabilidades npm en backend:
+command: cd backend
+command: npm audit
+
+Corregir vulnerabilidades npm en backend:
+command: npm audit fix
+
+
+12. PDF Y EXCEL, SI SE USAN EN REPORTES
+
+Generacion de PDF:
+command: npm install pdfkit
+
+Exportacion a Excel:
+command: npm install exceljs
+
+Instalacion conjunta para reportes:
+command: npm install pdfkit exceljs
+
+
+13. COMANDOS DE GIT BASICOS
+
+Ver estado del repositorio:
+command: git status
+
+Inicializar repositorio:
+command: git init
+
+Agregar archivos:
+command: git add .
+
+Crear commit:
+command: git commit -m "Configuracion inicial del sistema veterinario"
+
+Ver historial:
+command: git log --oneline
+
+
+14. COMANDOS GENERALES DEL PROYECTO
+
+Instalar dependencias raiz, si existe package.json en la raiz:
+command: npm install
+
+Instalar dependencias frontend:
+command: cd frontend
+command: npm install
+
+Instalar dependencias backend:
+command: cd backend
+command: npm install
+
+Ejecutar frontend:
+command: cd frontend
+command: npm run dev
+
+Ejecutar backend:
+command: cd backend
+command: npm start
+
+Compilar frontend:
+command: cd frontend
+command: npm run build

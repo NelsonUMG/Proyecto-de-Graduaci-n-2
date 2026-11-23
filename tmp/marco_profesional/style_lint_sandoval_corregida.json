@@ -1,0 +1,170 @@
+{
+  "input": "C:\\Users\\Nelson\\Desktop\\PAGINA WEB PROYECTO\\output\\MARCO_DE_ANEXOS_APA7_ESTRUCTURA_SANDOVAL_CORREGIDA.docx",
+  "fonts_by_char_count": {
+    "Times New Roman": 126339
+  },
+  "direct_run_formatting_runs": 3668,
+  "direct_paragraph_formatting_paragraphs": 3665,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 73,
+      "text": "\u00cdndice",
+      "style": "Normal"
+    },
+    {
+      "para_index": 79,
+      "text": "\u00cdndice de tablas",
+      "style": "Normal"
+    },
+    {
+      "para_index": 100,
+      "text": "\u00cdndice de Ilustraciones",
+      "style": "Normal"
+    },
+    {
+      "para_index": 185,
+      "text": "Tabla 1",
+      "style": "Caption"
+    },
+    {
+      "para_index": 195,
+      "text": "Tabla 2",
+      "style": "Caption"
+    },
+    {
+      "para_index": 207,
+      "text": "Ilustraci\u00f3n 1",
+      "style": "Caption"
+    },
+    {
+      "para_index": 223,
+      "text": "Tabla 3",
+      "style": "Caption"
+    },
+    {
+      "para_index": 233,
+      "text": "Tabla 4",
+      "style": "Normal"
+    },
+    {
+      "para_index": 249,
+      "text": "Ilustraci\u00f3n 2",
+      "style": "Normal"
+    },
+    {
+      "para_index": 263,
+      "text": "Ilustraci\u00f3n 3",
+      "style": "Normal"
+    },
+    {
+      "para_index": 272,
+      "text": "Ilustraci\u00f3n 4",
+      "style": "Normal"
+    },
+    {
+      "para_index": 288,
+      "text": "Tabla 5",
+      "style": "Normal"
+    },
+    {
+      "para_index": 295,
+      "text": "Ilustraci\u00f3n 5",
+      "style": "Normal"
+    },
+    {
+      "para_index": 316,
+      "text": "Tabla 6",
+      "style": "Caption"
+    },
+    {
+      "para_index": 320,
+      "text": "Tabla 7",
+      "style": "Caption"
+    },
+    {
+      "para_index": 326,
+      "text": "Tabla 8",
+      "style": "Caption"
+    },
+    {
+      "para_index": 331,
+      "text": "Tabla 9",
+      "style": "Caption"
+    },
+    {
+      "para_index": 334,
+      "text": "Tabla 10",
+      "style": "Caption"
+    },
+    {
+      "para_index": 337,
+      "text": "Tabla 11",
+      "style": "Caption"
+    },
+    {
+      "para_index": 340,
+      "text": "Tabla 12",
+      "style": "Caption"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 3,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 7,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 8,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 10,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 12,
+        "text": "",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 73,
+        "run_text": "\u00cdndice",
+        "style": "Normal"
+      },
+      {
+        "para_index": 77,
+        "run_text": "\t",
+        "style": "Normal"
+      },
+      {
+        "para_index": 79,
+        "run_text": "\u00cdndice de tablas",
+        "style": "Normal"
+      },
+      {
+        "para_index": 100,
+        "run_text": "\u00cdndice de Ilustraciones",
+        "style": "Normal"
+      },
+      {
+        "para_index": 185,
+        "run_text": "Tabla ",
+        "style": "Caption"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

@@ -1,0 +1,48 @@
+MODULOS ADICIONALES SUGERIDOS
+Sistema Web Veterinaria El Ganadero
+
+Base investigada:
+- AVMA: registros medicos electronicos, agenda, inventario, facturacion y reportes.
+- Sistemas PIMS veterinarios actuales: centralizan pacientes, citas, cobros, inventario y comunicacion.
+- Portales de clientes: solicitudes de citas, historial, certificados de vacunas y comunicacion.
+
+1. Recordatorios automaticos
+
+Enviar recordatorios de citas y vacunas por correo, SMS o WhatsApp autorizado.
+Impacto: reduce inasistencias y mejora seguimiento.
+
+2. Certificados de vacunacion
+
+Generar PDF imprimible para vacunas aplicadas.
+Impacto: documento util para clientes y control clinico.
+
+3. Recetas y renovacion de medicamentos
+
+Permitir que el empleado registre recetas y que el cliente solicite renovacion.
+Impacto: mejora seguimiento de tratamientos.
+
+4. Adjuntos clinicos
+
+Subir imagenes, examenes o documentos por mascota.
+Impacto: expediente clinico mas completo.
+
+5. Record de comunicaciones
+
+Guardar notas de llamadas, WhatsApp o mensajes en el perfil del cliente.
+Impacto: evita perdida de informacion y saturacion de conversaciones.
+
+6. Reportes ampliados
+
+Reportar horas pico, servicios mas solicitados, inasistencias, productos vencidos,
+stock bajo y ventas por periodo.
+Impacto: apoya toma de decisiones administrativas.
+
+7. Caja y cortes diarios
+
+Cerrar caja por dia, empleado y metodo de pago.
+Impacto: orden financiero para la clinica.
+
+8. Agenda por recurso
+
+Asignar cita a veterinario, sala o tipo de atencion.
+Impacto: evita choques de disponibilidad.
